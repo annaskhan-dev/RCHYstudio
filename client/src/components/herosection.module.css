@@ -1,0 +1,165 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.hero {
+  background-color: #f4ece0;
+  width: 100%;
+  min-height: auto; 
+  padding-bottom: 40px; /* Replaces the need for 100vh/large padding */
+  box-sizing: border-box;
+  overflow-x: hidden;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 30px; /* Added slight top breathing room */
+}
+
+.title {
+  font-family: 'General Sans Light', sans-serif;
+  font-size: 9px;
+  font-weight: 500;
+  margin-left: 12px;
+  color: #2A1410;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding-right: 9%;
+}
+
+.bridge {
+  height: 7px;
+  width: auto;
+  margin-right: -3px;
+}
+
+.lettersWrapper {
+  display: flex;
+  align-items: center;
+  height: 20px;
+}
+
+.logoLetter {
+  margin-right: 1px;
+  height: 60%;
+  width: auto;
+}
+
+.heroContent {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 7%;
+}
+
+.heroImage {
+  height: 135px;
+  object-fit: cover;
+  padding: 10px;
+}
+
+.starElement {
+  position: absolute;
+  top: 16px;
+  left: 43%;
+  width: 33px;
+  height: auto;
+}
+
+.heroFooter {
+  display: flex;
+  justify-content: flex-start;
+  margin-left: 0;
+  margin-top: 30px;
+}
+
+.heroFooterImage {
+  height: 130px;
+  width: 130px;
+margin-left: 0;
+}
+
+.heroFooterText {
+  font-family: 'General Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 500;
+  color: #2A1410;
+  margin-top: 70px;
+  /* REDUCED THIS: Changed from 120px to 0 to remove the gap */
+  padding-bottom: 0; 
+  text-align: center;
+padding-left: 0;         /* REMOVE the 150px padding */
+}
+
+/* =========================================================
+   RESPONSIVE OVERRIDES
+   ========================================================= */
+
+@media (max-width: 1024px) {
+  .heroFooter, .heroFooterImage {
+    margin-left: 18vw;
+
+  }
+  .heroFooter {
+    justify-content: center;
+    gap: 40px;
+  }
+  .heroFooterText {
+    padding-left: 8vw;
+    margin-top: 10vh;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroContent {
+    margin-top: 12%;
+  }
+
+  .heroImage {
+    max-width: 90%;
+    height: auto;
+  }
+
+  .starElement {
+    left: 42%;
+    transform: translateX(-50%);
+    width: 24px;
+    top: 12px;
+  }
+
+  .heroFooter {
+    flex-direction: column;
+    align-items: center;
+    margin-left: 0;
+    margin-top: 20px;
+  }
+
+  .heroFooterImage {
+    margin-top: 0;
+    margin-left: 0;
+    height: 100px;
+    width: 100px;
+  }
+
+  .heroFooterText {
+    margin-top: 1px;
+    margin-left: 0;
+    margin-right: 0;
+    padding-bottom: 0; 
+    padding-left: 20px;
+    padding-right: 20px;
+    font-size: 11px;
+
+  }
+
+  .navbar {
+    margin-left: 4vw;
+  }
+}

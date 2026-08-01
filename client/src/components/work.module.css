@@ -1,0 +1,182 @@
+/* --- ORIGINAL DESKTOP STYLES (Keep exactly as they are) --- */
+.h2 {
+  color: #2a1410;
+  font-family: "Clash Display Medium", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center;
+  margin-bottom: 100px;
+}
+.work {
+  padding-bottom: 90px;
+  background-color: #f9f3eb;
+  width: 100%;
+  box-sizing: border-box;
+  transition: all 0.5s ease;
+}
+.workcontainer {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 7px;
+  width: fit-content;
+  margin: 0 auto;
+}
+.columnTrack {
+  width: 130px;
+  display: flex;
+  flex-direction: column;
+}
+.columnTrack:nth-child(2),
+.columnTrack:nth-child(4) {
+  margin-top: 50px;
+}
+.insidecontainer {
+  display: flex;
+  flex-direction: column;
+  gap: 7px;
+  width: 100%;
+}
+.insidecontainer img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 6px;
+  display: block;
+  opacity: 0;
+  transform: translateY(20px);
+  transition:
+    opacity 0.8s ease,
+    transform 0.8s ease;
+}
+
+.work.opened .insidecontainer img {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Staggered Timing (Desktop) - Unchanged */
+.columnTrack:nth-child(1) img:nth-child(1) {
+  transition-delay: 0.1s;
+}
+.columnTrack:nth-child(1) img:nth-child(2) {
+  transition-delay: 0.2s;
+}
+.columnTrack:nth-child(2) img:nth-child(1) {
+  transition-delay: 0.3s;
+}
+.columnTrack:nth-child(2) img:nth-child(2) {
+  transition-delay: 0.4s;
+}
+.columnTrack:nth-child(3) img:nth-child(1) {
+  transition-delay: 0.5s;
+}
+.columnTrack:nth-child(3) img:nth-child(2) {
+  transition-delay: 0.6s;
+}
+.columnTrack:nth-child(4) img:nth-child(1) {
+  transition-delay: 0.7s;
+}
+.columnTrack:nth-child(4) img:nth-child(2) {
+  transition-delay: 0.8s;
+}
+.columnTrack:nth-child(5) img:nth-child(1) {
+  transition-delay: 0.9s;
+}
+.columnTrack:nth-child(5) img:nth-child(2) {
+  transition-delay: 1s;
+}
+
+/* --- MOBILE STICKY STACK (Card Deck Effect) --- */
+@media (max-width: 768px) {
+  .workcontainer {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    margin: 0 auto;
+    gap: 0;
+    padding-bottom: 160px; /* room to scroll so the last card can fully reveal */
+  }
+
+  /* Remove these as layout boxes — lets all 10 images flow as direct siblings */
+  .columnTrack,
+  .insidecontainer {
+    display: contents;
+  }
+
+  .insidecontainer img {
+    width: 70%;
+    max-width: 310px;
+    height: auto; /* height follows the image's natural aspect ratio */
+    object-fit: contain; /* no cropping, in case height is ever constrained */
+    border-radius: 16px;
+    box-shadow: 0 10px 24px rgba(42, 20, 16, 0.16);
+    margin: 0 auto 18px;
+    position: sticky;
+    opacity: 0;
+    transform: translateY(60px) scale(0.92);
+    transition:
+      opacity 0.7s ease,
+      transform 0.7s ease;
+  }
+
+  .work.opened .insidecontainer img {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+
+  /* Card 1 → Card 10, sticking in sequence */
+  .columnTrack:nth-child(1) .insidecontainer img:nth-child(1) {
+    top: 60px;
+    z-index: 1;
+  } /* pic1 */
+  .columnTrack:nth-child(1) .insidecontainer img:nth-child(2) {
+    top: 72px;
+    z-index: 2;
+  } /* pic2 */
+  .columnTrack:nth-child(2) .insidecontainer img:nth-child(1) {
+    top: 84px;
+    z-index: 3;
+  } /* pic3 */
+  .columnTrack:nth-child(2) .insidecontainer img:nth-child(2) {
+    top: 96px;
+    z-index: 4;
+  } /* pic4 */
+  .columnTrack:nth-child(3) .insidecontainer img:nth-child(1) {
+    top: 108px;
+    z-index: 5;
+  } /* pic5 */
+  .columnTrack:nth-child(3) .insidecontainer img:nth-child(2) {
+    top: 120px;
+    z-index: 6;
+  } /* pic6 */
+  .columnTrack:nth-child(4) .insidecontainer img:nth-child(1) {
+    top: 132px;
+    z-index: 7;
+  } /* pic7 */
+  .columnTrack:nth-child(4) .insidecontainer img:nth-child(2) {
+    top: 144px;
+    z-index: 8;
+  } /* pic8 */
+  .columnTrack:nth-child(5) .insidecontainer img:nth-child(1) {
+    top: 156px;
+    z-index: 9;
+  } /* pic9 */
+  .columnTrack:nth-child(5) .insidecontainer img:nth-child(2) {
+    top: 168px;
+    z-index: 10;
+  } /* pic10 */
+.h2 {
+  color: #2a1410;
+  font-family: "Clash Display Medium", sans-serif;
+  font-weight: 500;
+  font-size: 20px;
+  text-align: center; /* Ensures text alignment */
+  margin-bottom: 60px; /* Reduced slightly to bring images closer */
+  padding: 0 20px;    /* Adds breathing room on small screens */
+  max-width: 800px;   /* Prevents the text from stretching too wide on large screens */
+  margin-left: auto;  /* Centers the block itself */
+  margin-right: auto; /* Centers the block itself */
+  line-height: 1.4;   /* Improves readability for the two-line heading */
+}
+}

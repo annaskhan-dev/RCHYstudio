@@ -1,0 +1,85 @@
+.footer{
+    background-color: #D52122;
+    height: 110vh;
+    width: 100%;
+    padding-bottom: 200px;
+
+
+    
+}
+
+
+.footerlogo{
+    border-radius: 0px;
+    height: 30px;
+    width: 120px;
+}
+
+button{
+    background-color: #D52122;
+    border: none;
+    color: white;
+    font-family: "General sans";
+}
+
+nav{
+    display: flex;
+    margin-left: 65px;
+    padding-top: 40px;
+}
+
+.buttondiv{
+    margin-left: 400px;
+    display:flex;
+}
+
+button{
+    margin-right: 20px;
+}
+
+.footertext{
+    
+    font-family: "Clash Display";
+    font-size: 90px;
+    padding-top: 160px;
+    margin-left: 70px;
+    color: #F1B4B4;
+}
+/* =========================================================
+   RESPONSIVE OVERRIDES (Add this to the bottom of your file)
+   ========================================================= */
+
+@media (max-width: 768px) {
+  .footer {
+    height: auto; 
+    padding-bottom: 50px;
+  }
+
+  nav {
+    margin-left: 20px;
+    flex-direction: column; 
+    align-items: flex-start; /* This aligns everything (logo and buttons) to the left */
+    gap: 25px;
+  }
+
+  .buttondiv {
+    display: none; 
+  }
+
+  button {
+    width: auto;      /* Prevents buttons from stretching to 100% width */
+    margin-right: 0;  /* Removes the right margin so they stay left-aligned */
+    text-align: left; /* Keeps text inside button aligned left */
+  }
+
+  .footertext {
+    font-size: 45px; 
+    padding-top: 50px;
+    margin-left: 20px;
+  }
+
+  .footerlogo{
+    margin-bottom: 8%;
+  }
+
+}

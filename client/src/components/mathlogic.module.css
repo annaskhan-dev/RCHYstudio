@@ -1,0 +1,86 @@
+body {
+  margin: 0;
+  padding: 0;
+}
+
+.maincontainer {
+  background-color: #f4ece0;
+  width: 100%;
+  min-height: 100vh;
+  padding-bottom: 50px;
+  
+}
+
+.bar {
+  height: 6px;
+  width: 45%;
+  border-radius: 0px;
+  margin-left: 70px;
+  margin-top: 30px;
+}
+
+.navtext {
+  font-family: "General Sans bold", sans-serif;
+  font-size: 14px;
+  font-weight: 700;
+  color: #2a1410;
+  margin-left: 10px;
+  
+}
+
+.navtext1 {
+  font-family: "General Sans bold", sans-serif;
+  font-size: 9px;
+  font-weight: 530;
+  color: #2a1410;
+  width: 120px;
+  height: 6vh;
+  background-color: #e8ddcc;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 5px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-right: 70px;
+}
+
+.text {
+  font-family: "General Sans";
+  color: #5e4a42;
+  font-size: 7px;
+  font-weight: 600;
+  margin-left: 70px;
+  margin-top: 15px;
+}
+
+.hero {
+  margin-top: 35px;
+  display: flex;
+  gap: 10px;
+  margin-left: 70px;
+}
+.image1 {
+  width: 200px;
+  height: 180px;
+  border-radius: 2px; 
+  margin-top: 80px;
+}
+
+.image2 {
+  height: 240px;
+  width: 320px;
+  border-radius: 0.2px;
+  margin-top: 20px;
+}
+
+.image3 {
+    height: 230px;
+    margin-top: 30px;
+    border-radius: 2px;
+    width:200px;
+}
