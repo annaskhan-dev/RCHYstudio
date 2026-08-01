@@ -2,6 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* Add this line */
+  outline: none; /* Add this line */
 }
 
 .cardsSection {
@@ -337,13 +339,13 @@
   }
 
   .carouselWrapper {
-    height: 280px; 
+    height: 320px; 
     perspective: 800px;
   }
 
   .cardWrapper {
-    width: 120px;
-    height: 260px;
+    width: 150px;
+    height: 320px;
     
     transform: 
       translateX(calc(var(--offset) * 60px + var(--drag-offset)))
