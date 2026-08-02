@@ -2,8 +2,8 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent; /* Add this line */
-  outline: none; /* Add this line */
+  -webkit-tap-highlight-color: transparent;
+  outline: none;
 }
 
 .cardsSection {
@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; 
-  padding-top:110px;
+  padding-top: 110px;
   overflow: hidden;
   user-select: none;
   position: relative;
@@ -83,17 +83,15 @@
   justify-content: center;
   perspective: 1000px;
 
+  /* Increased multiplier to 130px to stop cards from overlapping */
   transform: 
-    translateX(calc(var(--offset) * 95px + var(--drag-offset)))
+    translateX(calc(var(--offset) * 130px + var(--drag-offset)))
     translateZ(calc(var(--abs-offset) * -60px))
     rotateY(calc(var(--offset) * -16deg))
     scale(calc(1 - var(--abs-offset) * 0.12));
 
   filter: brightness(calc(1 - var(--abs-offset) * 0.2)) drop-shadow(0 6px 14px rgba(42, 20, 16, 0.14));
-
-  transition: 
-    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-    filter 0.4s ease;
+  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.4s ease;
 }
 
 .cardContainer.dragging .cardWrapper:not(.transitioning) {
@@ -104,14 +102,11 @@
 .cardInner {
   position: relative;
   width: 100%;
-  height: 450px; 
+  height: 450px; /* Must match cardWrapper */
   transform-style: preserve-3d;
-  /* Back to your elegant, smooth transition speed */
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
-  background: red; /* ADD THIS TEMPORARILY */
 }
 
-/* Triggers flip when active zone is hovered */
 .centerCard.hovered .cardInner {
   transform: rotateY(180deg);
 }
@@ -140,17 +135,18 @@
   background: transparent;
 }
 
+/* Fixed image distortion */
 .cardImg {
   width: 100%;
   height: 100%;
-  object-fit: contain;
+  object-fit: cover; /* Ensures image fills space without stretching */
 }
 
 /* --- 2D INTERACTION HIT LAYOUT --- */
 .interactionOverlay {
   position: absolute;
   width: 100%;
-  height: 450px;  /* Matches the exact cardWrapper height */
+  height: 450px; /* Must match cardWrapper */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,21 +156,18 @@
 .hitZone {
   position: absolute;
   width: 100px;
-  height: 320px;
+  height: 450px; /* Aligned to match new height */
   cursor: pointer;
   background: transparent; 
-  transform: translateX(calc(var(--offset) * 95px));
+  transform: translateX(calc(var(--offset) * 130px));
   z-index: 1; 
 }
 
-/* Matches the visible card dimension EXACTLY in both width and height */
 .activeHitZone {
-  width: 190px;   /* Exact width of your cardWrapper */
-  height: 230px;  /* Exact height of your cardWrapper */
-  z-index: 5;     /* Layers it ABOVE the side hitZones so they never block its edges */
+  width: 180px;  /* Matches cardWrapper width */
+  height: 450px; /* Matches cardWrapper height */
+  z-index: 5;
 }
-
-
 
 /* =========================================================
    MOBILE RESPONSIVE OVERRIDES
@@ -187,41 +180,39 @@
   }
 
   .carouselWrapper {
-    height: 320px; 
+    height: 360px; /* Increased mobile carousel height */
     perspective: 800px;
   }
 
   .cardWrapper {
-    width: 180px;
-    height: 450px;
-    
+    width: 150px;
+    height: 360px; /* Mobile height */
     transform: 
-      translateX(calc(var(--offset) * 60px + var(--drag-offset)))
+      translateX(calc(var(--offset) * 100px + var(--drag-offset)))
       translateZ(calc(var(--abs-offset) * -40px))
       rotateY(calc(var(--offset) * -16deg))
       scale(calc(0.7 - var(--abs-offset) * 0.1));
   }
 
   .cardInner {
-    height: 260px;
+    height: 360px; /* Fixed: aligned with wrapper */
   }
 
   .interactionOverlay {
-    height: 260px;
+    height: 360px; /* Fixed: aligned with wrapper */
   }
 
-  /* Shrinking the Hit Zone to fit the smaller cards more precisely */
   .hitZone {
-    height: 120px; /* Reduced to make the click area more precise */
-    transform: translateX(calc(var(--offset) * 60px));
+    height: 360px;
+    transform: translateX(calc(var(--offset) * 100px));
   }
 
   .activeHitZone {
-    width: 120px;
-    height: 180px; /* Kept taller to ensure easy clicking on the active card */
+    width: 150px;
+    height: 360px;
   }
 
-  .h2{
+  .h2 {
     font-size: 14px;
   }
 }
