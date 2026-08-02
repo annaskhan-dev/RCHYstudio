@@ -83,6 +83,7 @@
     align-items: center; 
     margin-top: 60px;
     gap: 80px;
+    margin-right: 7vw;
   }
 
   .heroFooterImage {
@@ -134,7 +135,7 @@
     flex-direction: column;
     justify-content: center;
     text-align: center;
-    margin-top: 40px;
+    margin-top: 40px; 
     gap: 20px;
     margin-right: 0 !important;
   }
