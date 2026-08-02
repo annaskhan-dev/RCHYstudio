@@ -4,7 +4,7 @@
   min-height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden;
-  padding-bottom: 60px; /* Increased bottom padding */
+  padding-bottom: 80px; /* Increased bottom padding */
 }
 
 .heroWrapper {
@@ -16,13 +16,13 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 40px 4vw; /* More breathing room */
+  padding: 20px 4vw; /* More breathing room */
   width: 100%;
 }
 
 .title {
   font-family: 'General Sans Light', sans-serif;
-  font-size: 12px; /* Increased size */
+  font-size: 16px; /* Increased size */
   font-weight: 500;
   margin-left: 20px;
   color: #2A1410;
@@ -36,7 +36,7 @@
 }
 
 .bridge {
-  height: 10px; /* Increased size */
+  height: 14px; /* Increased size */
   width: auto;
   margin-right: -3px;
 }
@@ -69,9 +69,9 @@
 
 .starElement {
   position: absolute;
-  top: 30px; /* Adjusted position for larger text */
-  margin-left: 150px; /* Adjusted position */
-  width: 50px; /* Increased star size */
+  top: 20px; /* Adjusted position for larger text */
+  margin-left: 110px; /* Adjusted position */
+  width: 54px; /* Increased star size */
   height: auto;
 }
 
