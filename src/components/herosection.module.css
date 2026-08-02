@@ -16,8 +16,9 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 50px;
-  padding-right: 4vw;
+  paddin-top: 50px;
+  padding-right: 7vw;
+  padding-left: 2vw;
   width: 100%;
 }
 
@@ -73,7 +74,7 @@
 .starElement {
   position: absolute;
   top: 20px;
-  margin-left: -85px; 
+  margin-left: -105px; 
   width: 54px;
   height: auto;
 }
