@@ -1,10 +1,8 @@
-
-
 .hero {
   background-color: #f4ece0;
   width: 100%;
   min-height: auto; 
-  padding-bottom: 40px; /* Replaces the need for 100vh/large padding */
+  padding-bottom: 40px;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -12,11 +10,11 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px; /* Added slight top breathing room */
+  padding-top: 30px;
 }
 
 .title {
-  font-family: 'General Sans Light', sans-serif;
+  font-family: 'General Sans Light', sans-serif, Arial;
   font-size: 9px;
   font-weight: 500;
   margin-left: 12px;
@@ -70,29 +68,30 @@
   height: auto;
 }
 
+/* STABILIZED FOOTER */
 .heroFooter {
   display: flex;
   justify-content: flex-start;
+  align-items: center; /* Ensures content stays aligned */
   margin-left: 0;
   margin-top: 30px;
+  gap: 20px;           /* Use gap instead of margin-left/padding */
 }
 
 .heroFooterImage {
   height: 130px;
   width: 130px;
-margin-left: 0;
+  flex-shrink: 0;      /* Prevents the image from squishing */
 }
 
 .heroFooterText {
-  font-family: 'General Sans', sans-serif;
+  font-family: 'General Sans', sans-serif, Arial;
   font-size: 8px;
   font-weight: 500;
   color: #2A1410;
-  margin-top: 70px;
-  /* REDUCED THIS: Changed from 120px to 0 to remove the gap */
-  padding-bottom: 0; 
+  margin: 0;           /* Remove margin, controlled by parent gap */
   text-align: center;
-padding-left: 0;         /* REMOVE the 150px padding */
+  max-width: 400px;    /* Prevents text from forcing layout expansion */
 }
 
 /* =========================================================
@@ -100,17 +99,10 @@ padding-left: 0;         /* REMOVE the 150px padding */
    ========================================================= */
 
 @media (max-width: 1024px) {
-  .heroFooter, .heroFooterImage {
-    margin-left: 18vw;
-
-  }
   .heroFooter {
     justify-content: center;
     gap: 40px;
-  }
-  .heroFooterText {
-    padding-left: 8vw;
-    margin-top: 10vh;
+    margin-left: 0;    /* Cleaned up responsive margin */
   }
 }
 
@@ -131,29 +123,24 @@ padding-left: 0;         /* REMOVE the 150px padding */
     top: 12px;
   }
 
+  /* Mobile: Vertical Stack */
   .heroFooter {
     flex-direction: column;
     align-items: center;
-    margin-left: 0;
+    gap: 15px;         /* Tighter spacing for mobile */
     margin-top: 20px;
   }
 
   .heroFooterImage {
-    margin-top: 0;
-    margin-left: 0;
     height: 100px;
     width: 100px;
   }
 
   .heroFooterText {
-    margin-top: 1px;
-    margin-left: 0;
-    margin-right: 0;
-    padding-bottom: 0; 
+    font-size: 11px;
     padding-left: 20px;
     padding-right: 20px;
-    font-size: 11px;
-
+    margin-top: 0;
   }
 
   .navbar {
