@@ -91,7 +91,7 @@
 .heroFooterImage {
   height: 220px; 
   width: 220px;
-  margin-right: 10vw;
+  margin-right: 12vw;
 }
 
 .heroFooterText {
@@ -102,6 +102,7 @@
   text-align: center;
   line-height: 1.6;
   max-width: 400px;
+  margin-right: 2vw;
 }
 
 /* RESPONSIVE */
