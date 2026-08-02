@@ -97,12 +97,12 @@
 .heroFooterText {
   font-family: 'General Sans', sans-serif;
   font-size: 13px;
-  font-weight: 550;
+  font-weight: 570;
   color: #2A1410;
   text-align: center;
-  line-height: 1.6;
+  line-height: 1.2;
   max-width: 400px;
-  margin-right: 2vw;
+  margin-right: 3vw;
 }
 
 /* RESPONSIVE */
