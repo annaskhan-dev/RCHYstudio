@@ -16,7 +16,7 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 30px 3vw;
+  padding: 50px 1vw;
   width: 100%;
 }
 
@@ -59,11 +59,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 7%; 
+  margin-top: 8%; 
 }
 
 .heroImage {
-  height: 200px;
+  height: 250px;
   object-fit: cover;
   padding: 10px;
 }
@@ -72,7 +72,7 @@
 .starElement {
   position: absolute;
   top: 20px;
-  margin-left: 45px; 
+  margin-left: 25px; 
   width: 54px;
   height: auto;
 }
