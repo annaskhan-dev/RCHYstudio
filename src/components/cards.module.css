@@ -40,7 +40,7 @@
   align-items: center;
   width: 100%;
   max-width: 1000px; 
-  height: 450px; 
+  height: 400px; /* Adjusted to fit the new card size */
   perspective: 1600px;
   z-index: 15;
 }
@@ -74,8 +74,8 @@
 /* --- CARD WRAPPER --- */
 .cardWrapper {
   position: absolute;
-  width: 180px;
-  height: 450px;
+  width: 240px; /* Perfect width */
+  height: 360px; /* Perfect height */
   background: transparent !important;
   display: flex;
   flex-direction: column;
@@ -83,9 +83,9 @@
   justify-content: center;
   perspective: 1000px;
 
-  /* Increased multiplier to 130px to stop cards from overlapping */
+  /* Increased multiplier to 180px to accommodate wider cards */
   transform: 
-    translateX(calc(var(--offset) * 130px + var(--drag-offset)))
+    translateX(calc(var(--offset) * 180px + var(--drag-offset)))
     translateZ(calc(var(--abs-offset) * -60px))
     rotateY(calc(var(--offset) * -16deg))
     scale(calc(1 - var(--abs-offset) * 0.12));
@@ -102,7 +102,7 @@
 .cardInner {
   position: relative;
   width: 100%;
-  height: 450px; /* Must match cardWrapper */
+  height: 360px; /* Must match cardWrapper */
   transform-style: preserve-3d;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -135,18 +135,17 @@
   background: transparent;
 }
 
-/* Fixed image distortion */
 .cardImg {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image fills space without stretching */
+  object-fit: cover; /* Ensures images are perfectly centered/filled without stretching */
 }
 
 /* --- 2D INTERACTION HIT LAYOUT --- */
 .interactionOverlay {
   position: absolute;
   width: 100%;
-  height: 450px; /* Must match cardWrapper */
+  height: 360px; /* Must match cardWrapper */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -155,17 +154,17 @@
 
 .hitZone {
   position: absolute;
-  width: 100px;
-  height: 450px; /* Aligned to match new height */
+  width: 120px;
+  height: 360px;
   cursor: pointer;
   background: transparent; 
-  transform: translateX(calc(var(--offset) * 130px));
+  transform: translateX(calc(var(--offset) * 180px));
   z-index: 1; 
 }
 
 .activeHitZone {
-  width: 180px;  /* Matches cardWrapper width */
-  height: 450px; /* Matches cardWrapper height */
+  width: 240px;  /* Matches cardWrapper width */
+  height: 360px; /* Matches cardWrapper height */
   z-index: 5;
 }
 
@@ -180,36 +179,32 @@
   }
 
   .carouselWrapper {
-    height: 360px; /* Increased mobile carousel height */
+    height: 300px;
     perspective: 800px;
   }
 
   .cardWrapper {
-    width: 150px;
-    height: 360px; /* Mobile height */
+    width: 160px;
+    height: 240px; /* Maintained 2:3 ratio */
     transform: 
-      translateX(calc(var(--offset) * 100px + var(--drag-offset)))
+      translateX(calc(var(--offset) * 110px + var(--drag-offset)))
       translateZ(calc(var(--abs-offset) * -40px))
       rotateY(calc(var(--offset) * -16deg))
       scale(calc(0.7 - var(--abs-offset) * 0.1));
   }
 
-  .cardInner {
-    height: 360px; /* Fixed: aligned with wrapper */
-  }
-
-  .interactionOverlay {
-    height: 360px; /* Fixed: aligned with wrapper */
+  .cardInner, .interactionOverlay {
+    height: 240px;
   }
 
   .hitZone {
-    height: 360px;
-    transform: translateX(calc(var(--offset) * 100px));
+    height: 240px;
+    transform: translateX(calc(var(--offset) * 110px));
   }
 
   .activeHitZone {
-    width: 150px;
-    height: 360px;
+    width: 160px;
+    height: 240px;
   }
 
   .h2 {
