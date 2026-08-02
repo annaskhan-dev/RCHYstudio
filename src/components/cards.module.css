@@ -74,8 +74,8 @@
 /* --- CARD WRAPPER --- */
 .cardWrapper {
   position: absolute;
-  width: 160px;
-  height: 380px;
+  width: 180px;
+  height: 400px;
   background: transparent !important;
   display: flex;
   flex-direction: column;
