@@ -82,15 +82,15 @@
 /* PERFECT ALIGNMENT: Added align-items: center to fix bridge/text vertical gap */
 .heroFooter {
   display: flex;
-  justify-content: center;
+  justify-content: flex-end;
   align-items: center; 
   margin-top: 60px;
   gap: 80px;
 }
 
 .heroFooterImage {
-  height: 230px; 
-  width: 230px;
+  height: 220px; 
+  width: 220px;
 }
 
 .heroFooterText {
