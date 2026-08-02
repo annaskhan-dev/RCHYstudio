@@ -1,115 +1,117 @@
-.rchy_hero_section {
+.hero {
   background-color: #f4ece0;
   width: 100%;
-  padding-bottom: 60px;
-  overflow: hidden; 
+  min-height: 100vh;
+  box-sizing: border-box;
+  overflow-x: hidden;
+  padding-bottom: 40px;
 }
 
-.rchy_main_wrapper {
+/* This container acts as the 'anchor' for your design */
+.heroWrapper {
   max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 20px;
+  margin: 0 auto; /* This keeps your design centered automatically */
+  width: 100%;
 }
 
-.rchy_nav_bar {
+.navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
   padding-top: 30px;
+  width: 100%;
 }
 
-.rchy_title {
-  font-family: 'General Sans Light', sans-serif, Arial;
-  font-size: 14px;
+.title {
+  font-family: 'General Sans Light', sans-serif;
+  font-size: 9px;
   font-weight: 500;
+  margin-left: 20px;
   color: #2A1410;
-  margin: 0;
 }
 
-.rchy_logo_container {
+.logoContainer {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 6px;
+  padding-right: 20px;
 }
 
-.rchy_bridge {
-  height: 10px;
+.bridge {
+  height: 7px;
   width: auto;
+  margin-right: -3px;
 }
 
-.rchy_letters_wrapper {
+.lettersWrapper {
   display: flex;
   align-items: center;
-  gap: 2px;
-}
-
-.rchy_logo_letter {
   height: 20px;
+}
+
+.logoLetter {
+  margin-right: 1px;
+  height: 60%;
   width: auto;
 }
 
-.rchy_hero_content {
+.heroContent {
   position: relative;
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Ensures the image/star block stays centered */
   align-items: center;
-  margin-top: 50px;
+  margin-top: 7%;
 }
 
-.rchy_hero_image {
-  height: auto;
-  max-width: 600px;
-  width: 100%;
+.heroImage {
+  height: 135px;
+  object-fit: cover;
   padding: 10px;
 }
 
-.rchy_star_element {
+.starElement {
   position: absolute;
-  top: 10%;
-  right: 25%; /* Changed to right-relative to keep it near the image */
-  width: 40px;
+  /* Instead of left: 43%, we center this relative to the heroContent wrapper */
+  top: 16px;
+  margin-left: 100px; /* Adjust this specific value to place it on the 'M' */
+  width: 33px;
+  height: auto;
 }
 
-.rchy_hero_footer {
+.heroFooter {
   display: flex;
-  justify-content: center;
+  justify-content: center; /* Keeps footer items centered */
   align-items: center;
   margin-top: 50px;
-  gap: 30px;
+  gap: 20px;
 }
 
-.rchy_hero_footer_image {
-  height: 120px;
-  width: 120px;
-  flex-shrink: 0;
+.heroFooterImage {
+  height: 130px;
+  width: 130px;
 }
 
-.rchy_hero_footer_text {
-  font-family: 'General Sans', sans-serif, Arial;
-  font-size: 12px;
+.heroFooterText {
+  font-family: 'General Sans', sans-serif;
+  font-size: 8px;
+  font-weight: 500;
   color: #2A1410;
-  margin: 0;
-  max-width: 400px;
+  text-align: left;
+  line-height: 1.4;
 }
 
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .rchy_nav_bar {
-    padding-top: 20px;
-  }
-
-  .rchy_hero_content {
-    margin-top: 40px;
-  }
-
-  .rchy_hero_footer {
+  .heroContent { margin-top: 12%; }
+  .starElement { width: 24px; top: 12px; margin-left: 70px; }
+  
+  .heroFooter {
     flex-direction: column;
-    gap: 15px;
-    margin-top: 30px;
-  }
-
-  .rchy_hero_footer_text {
-    font-size: 11px;
-    padding: 0 20px;
     text-align: center;
+  }
+  
+  .heroFooterText {
+    text-align: center;
+    padding: 0 20px;
+    font-size: 11px;
   }
 }
