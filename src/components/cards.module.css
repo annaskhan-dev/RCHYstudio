@@ -96,9 +96,9 @@
   perspective: 1000px;
 
   /* 
-     UPDATED STACKING LOGIC:
-     - translateX(90px): Tighter overlap.
-     - scale(1 - abs * 0.25): Side cards shrink faster, making center look larger.
+     DESKTOP STACKING LOGIC:
+     - translateX(90px): Tighter overlap for the 220px width.
+     - scale(1 - abs * 0.25): Makes the front card look significantly larger.
      - rotateY(-10deg): Flatter stack alignment.
   */
   transform: 
@@ -169,7 +169,7 @@
   height: 480px;
   cursor: pointer;
   background: transparent;
-  /* Sync with the new 90px spacing */
+  /* Sync with the 90px desktop spacing */
   transform: translateX(calc(var(--offset) * 90px));
   z-index: 1;
 }
@@ -226,4 +226,4 @@
   .h2 {
     font-size: 14px;
   }
-} 
+}
