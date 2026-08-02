@@ -83,10 +83,9 @@
   width: 220px;
   height: 480px;
   
-  /* Transparent background to show cards directly */
+  /* MAINTAIN TRANSPARENCY */
   background: transparent !important; 
   
-  /* Rounded corners for the card shape */
   border-radius: 16px;
   overflow: hidden; 
   
@@ -97,17 +96,17 @@
   perspective: 1000px;
 
   /* 
-     STACKING LOGIC:
-     translateX(100px) creates the overlap.
-     rotateY(-16deg) adds the deck angle.
+     UPDATED STACKING LOGIC:
+     - translateX(90px): Tighter overlap.
+     - scale(1 - abs * 0.25): Side cards shrink faster, making center look larger.
+     - rotateY(-10deg): Flatter stack alignment.
   */
   transform: 
-    translateX(calc(var(--offset) * 100px + var(--drag-offset)))
-    translateZ(calc(var(--abs-offset) * -60px))
-    rotateY(calc(var(--offset) * -16deg))
-    scale(calc(1 - var(--abs-offset) * 0.12));
+    translateX(calc(var(--offset) * 90px + var(--drag-offset)))
+    translateZ(calc(var(--abs-offset) * -50px))
+    rotateY(calc(var(--offset) * -10deg))
+    scale(calc(1 - var(--abs-offset) * 0.25));
 
-  /* Using drop-shadow on the container to shadow the card images */
   filter: brightness(calc(1 - var(--abs-offset) * 0.2)) drop-shadow(0 10px 20px rgba(0, 0, 0, 0.15));
 
   transition: 
@@ -170,8 +169,8 @@
   height: 480px;
   cursor: pointer;
   background: transparent;
-  /* Sync with the 100px used in cardWrapper */
-  transform: translateX(calc(var(--offset) * 100px));
+  /* Sync with the new 90px spacing */
+  transform: translateX(calc(var(--offset) * 90px));
   z-index: 1;
 }
 
@@ -227,4 +226,4 @@
   .h2 {
     font-size: 14px;
   }
-}
+} 
