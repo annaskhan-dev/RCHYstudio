@@ -16,15 +16,15 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 50px 1vw;
+  padding: 50px 2.5vw;
   width: 100%;
 }
 
 .title {
   font-family: 'General Sans Light', sans-serif;
-  font-size: 16px;
+  font-size: 17px;
   font-weight: 500;
-  margin-left: 20px;
+  margin-left:15px;
   color: #2A1410;
 }
 
@@ -59,11 +59,11 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 8%; 
+  margin-top: 6%; 
 }
 
 .heroImage {
-  height: 230px;
+  height: 220px;
   object-fit: cover;
   padding: 10px;
 }
@@ -72,7 +72,7 @@
 .starElement {
   position: absolute;
   top: 20px;
-  margin-left: 250px; 
+  margin-left: -45px; 
   width: 54px;
   height: auto;
 }
