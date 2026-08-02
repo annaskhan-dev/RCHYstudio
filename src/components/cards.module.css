@@ -1,12 +1,11 @@
+
 /* =========================================================
-   GLOBAL RESET
+   BASE STYLES (Desktop)
    ========================================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  -webkit-tap-highlight-color: transparent;
-  outline: none;
 }
 
 .cardsSection {
@@ -17,7 +16,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; 
-  padding-top: 110px;
+  padding-top:110px;
   overflow: hidden;
   user-select: none;
   position: relative;
@@ -35,7 +34,6 @@
   margin-bottom: -10px; 
 }
 
-/* --- Carousel Wrapper --- */
 .carouselWrapper {
   position: relative;
   display: flex;
@@ -73,7 +71,6 @@
   pointer-events: none;
 }
 
-/* --- CARD WRAPPER --- */
 .cardWrapper {
   position: absolute;
   width: 160px;
@@ -92,7 +89,10 @@
     scale(calc(1 - var(--abs-offset) * 0.12));
 
   filter: brightness(calc(1 - var(--abs-offset) * 0.2)) drop-shadow(0 6px 14px rgba(42, 20, 16, 0.14));
-  transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), filter 0.4s ease;
+
+  transition: 
+    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
+    filter 0.4s ease;
 }
 
 .cardInner {
@@ -121,24 +121,12 @@
   transform: rotateY(180deg);
 }
 
-/* --- IMAGE STYLING --- */
-.imageContainer {
-  width: 100%;
-  height: 100%; 
-  padding: 30px; /* THIS REPLACES THE 120% HACK */
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: transparent;
-}
-
 .cardImg {
-  width: 100%; /* Perfectly fits inside the padded container */
+  width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-/* --- INTERACTION LAYOUT --- */
 .interactionOverlay {
   position: absolute;
   width: 100%;
@@ -183,6 +171,7 @@
   .cardWrapper {
     width: 150px;
     height: 320px;
+    
     transform: 
       translateX(calc(var(--offset) * 60px + var(--drag-offset)))
       translateZ(calc(var(--abs-offset) * -40px))
@@ -198,17 +187,18 @@
     height: 260px;
   }
 
+  /* Shrinking the Hit Zone to fit the smaller cards more precisely */
   .hitZone {
-    height: 120px;
+    height: 120px; /* Reduced to make the click area more precise */
     transform: translateX(calc(var(--offset) * 60px));
   }
 
   .activeHitZone {
     width: 120px;
-    height: 180px;
+    height: 180px; /* Kept taller to ensure easy clicking on the active card */
   }
 
-  .h2 {
+  .h2{
     font-size: 14px;
   }
 }
