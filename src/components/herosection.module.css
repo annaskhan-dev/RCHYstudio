@@ -5,6 +5,7 @@
   box-sizing: border-box;
   overflow-x: hidden;
   padding-bottom: 80px;
+  margin-top: 2%;
 }
 
 .heroWrapper {
@@ -59,7 +60,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5%; 
+  margin-top: 7%; 
 }
 
 .heroImage {
@@ -72,7 +73,7 @@
 .starElement {
   position: absolute;
   top: 20px;
-  margin-left: 85px; 
+  margin-left: 65px; 
   width: 54px;
   height: auto;
 }
@@ -93,10 +94,10 @@
 
 .heroFooterText {
   font-family: 'General Sans', sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: 500;
   color: #2A1410;
-  text-align: left;
+  text-align: center;
   line-height: 1.6;
   max-width: 400px;
 }
