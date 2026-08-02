@@ -1,29 +1,31 @@
-/* Container Layout */
 .hero {
   background-color: #f4ece0;
   width: 100%;
   min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  padding-bottom: 40px;
   box-sizing: border-box;
+  overflow-x: hidden;
+  padding-bottom: 40px;
 }
 
-/* Navbar */
+/* This container acts as the 'anchor' for your design */
+.heroWrapper {
+  max-width: 1200px;
+  margin: 0 auto; /* This keeps your design centered automatically */
+  width: 100%;
+}
+
 .navbar {
   display: flex;
   justify-content: space-between;
-  align-items: center;
-  padding: 30px 4vw;
+  padding-top: 30px;
   width: 100%;
-  box-sizing: border-box;
 }
 
 .title {
   font-family: 'General Sans Light', sans-serif;
   font-size: 9px;
   font-weight: 500;
-  margin-left: 12px;
+  margin-left: 20px;
   color: #2A1410;
 }
 
@@ -31,7 +33,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  padding-right: 4vw;
+  padding-right: 20px;
 }
 
 .bridge {
@@ -52,79 +54,64 @@
   width: auto;
 }
 
-/* Hero Main Content */
-.heroMain {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding: 0 20px;
-  text-align: center;
-}
-
-.headline {
-  font-family: 'General Sans', sans-serif;
-  font-size: clamp(3rem, 8vw, 6rem);
-  line-height: 0.95;
-  color: #2A1410;
-  margin: 0 0 50px 0;
-  font-weight: 600;
-}
-
-/* The Star Anchor */
-.mWrapper {
+.heroContent {
   position: relative;
-  display: inline-block;
-}
-
-.star {
-  position: absolute;
-  top: -15px;    /* Adjust this to move the star vertically */
-  right: -28px;  /* Adjust this to move the star horizontally */
-  width: 35px;
-  height: auto;
-}
-
-/* Footer Section */
-.footerSection {
   display: flex;
+  justify-content: center; /* Ensures the image/star block stays centered */
   align-items: center;
-  justify-content: center;
-  gap: 20px;
-  max-width: 600px;
+  margin-top: 7%;
 }
 
-.footerImg {
-  width: 100px;
+.heroImage {
+  height: 135px;
+  object-fit: cover;
+  padding: 10px;
+}
+
+.starElement {
+  position: absolute;
+  /* Instead of left: 43%, we center this relative to the heroContent wrapper */
+  top: 16px;
+  margin-left: 100px; /* Adjust this specific value to place it on the 'M' */
+  width: 33px;
   height: auto;
 }
 
-.footerText {
+.heroFooter {
+  display: flex;
+  justify-content: center; /* Keeps footer items centered */
+  align-items: center;
+  margin-top: 50px;
+  gap: 20px;
+}
+
+.heroFooterImage {
+  height: 130px;
+  width: 130px;
+}
+
+.heroFooterText {
   font-family: 'General Sans', sans-serif;
-  font-size: 12px;
+  font-size: 8px;
+  font-weight: 500;
   color: #2A1410;
   text-align: left;
-  line-height: 1.5;
-  margin: 0;
+  line-height: 1.4;
 }
 
-/* Responsive Overrides */
+/* RESPONSIVE */
 @media (max-width: 768px) {
-  .footerSection {
+  .heroContent { margin-top: 12%; }
+  .starElement { width: 24px; top: 12px; margin-left: 70px; }
+  
+  .heroFooter {
     flex-direction: column;
     text-align: center;
   }
   
-  .footerText {
+  .heroFooterText {
     text-align: center;
-    padding-top: 15px;
+    padding: 0 20px;
     font-size: 11px;
-  }
-
-  .star {
-    width: 20px;
-    top: -8px;
-    right: -15px;
   }
 }
