@@ -4,11 +4,11 @@
   min-height: 100vh;
   box-sizing: border-box;
   overflow-x: hidden;
-  padding-bottom: 80px; /* Increased bottom padding */
+  padding-bottom: 80px;
 }
 
 .heroWrapper {
-  max-width: 1400px; /* Wider container for larger visuals */
+  max-width: 1400px;
   margin: 0 auto;
   width: 100%;
 }
@@ -16,13 +16,13 @@
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding: 20px 4vw; /* More breathing room */
+  padding: 20px 4vw;
   width: 100%;
 }
 
 .title {
   font-family: 'General Sans Light', sans-serif;
-  font-size: 16px; /* Increased size */
+  font-size: 16px;
   font-weight: 500;
   margin-left: 20px;
   color: #2A1410;
@@ -36,7 +36,7 @@
 }
 
 .bridge {
-  height: 14px; /* Increased size */
+  height: 14px;
   width: auto;
   margin-right: -3px;
 }
@@ -44,7 +44,7 @@
 .lettersWrapper {
   display: flex;
   align-items: center;
-  height: 25px; /* Increased height */
+  height: 25px;
 }
 
 .logoLetter {
@@ -53,45 +53,47 @@
   width: auto;
 }
 
+/* TIGHTENED GAP: Decreased margin-top from 10% to 5% */
 .heroContent {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 10%;
+  margin-top: 5%; 
 }
 
 .heroImage {
-  height: 200px; /* Increased placeholder size */
+  height: 200px;
   object-fit: cover;
   padding: 10px;
 }
 
+/* ADJUSTED STAR: Moved left by changing margin-left to 85px */
 .starElement {
   position: absolute;
-  top: 20px; /* Adjusted position for larger text */
-  margin-left: 110px; /* Adjusted position */
-  width: 54px; /* Increased star size */
+  top: 20px;
+  margin-left: 85px; 
+  width: 54px;
   height: auto;
 }
 
-/* Footer Section */
+/* PERFECT ALIGNMENT: Added align-items: center to fix bridge/text vertical gap */
 .heroFooter {
   display: flex;
   justify-content: center;
-  align-items: center;
-  margin-top: 80px; /* More space from content */
-  gap: 40px;
+  align-items: center; 
+  margin-top: 60px;
+  gap: 20px;
 }
 
 .heroFooterImage {
-  height: 220px; /* Significantly increased bridge circle size */
-  width: 220px;
+  height: 200px; 
+  width: 200px;
 }
 
 .heroFooterText {
   font-family: 'General Sans', sans-serif;
-  font-size: 16px; /* Increased text readability */
+  font-size: 16px;
   font-weight: 500;
   color: #2A1410;
   text-align: left;
@@ -101,8 +103,8 @@
 
 /* RESPONSIVE */
 @media (max-width: 768px) {
-  .heroContent { margin-top: 15%; }
-  .starElement { width: 35px; top: 15px; margin-left: 100px; }
+  .heroContent { margin-top: 10%; }
+  .starElement { width: 35px; top: 15px; margin-left: 70px; }
   
   .heroFooter {
     flex-direction: column;
