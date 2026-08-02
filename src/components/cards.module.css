@@ -1,5 +1,5 @@
 /* =========================================================
-   GLOBAL RESET
+   BASE STYLES & GLOBAL RESETS
    ========================================================= */
 * {
   margin: 0;
@@ -9,10 +9,8 @@
   outline: none;
 }
 
-/* =========================================================
-   LAYOUT
-   ========================================================= */
 .cardsSection {
+  /* UPDATED: Premium light background */
   background-color: #f9f3eb;
   min-height: 100vh;
   width: 100%;
@@ -28,16 +26,18 @@
 }
 
 .h2 {
+  /* UPDATED: Dark text color and font */
   color: #2a1410;
   font-family: "Clash Display Medium", sans-serif;
   font-weight: 500;
-  font-size: 30px;
+  font-size: 20px;
   text-align: center;
   line-height: 1.3;
   padding-top: 15px;
-  margin-bottom: 15vh;
+  margin-bottom: -10px;
 }
 
+/* --- Carousel Wrapper --- */
 .carouselWrapper {
   position: relative;
   display: flex;
@@ -45,7 +45,7 @@
   align-items: center;
   width: 100%;
   max-width: 1000px;
-  height: 500px; /* Increased to fit larger cards */
+  height: 440px;
   perspective: 1600px;
   z-index: 15;
 }
@@ -64,9 +64,7 @@
   cursor: grabbing;
 }
 
-/* =========================================================
-   VISUAL TRACK & CARDS
-   ========================================================= */
+/* --- VISUAL INTERFACE TRACK --- */
 .visualTrack {
   position: absolute;
   width: 100%;
@@ -78,25 +76,32 @@
   pointer-events: none;
 }
 
+/* --- CARD WRAPPER --- */
 .cardWrapper {
   position: absolute;
-  width: 220px; /* NEW SIZE */
-  height: 480px; /* NEW SIZE */
-  background: transparent !important;
+  width: 160px;
+  height: 380px;
+  
+  /* UPDATED: White card background with subtle dark shadow */
+  background: #FFFFFF !important; 
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(42, 20, 16, 0.08); /* Refined shadow */
+  
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-start; /* Changed to start for better alignment of content */
   perspective: 1000px;
 
-  /* Increased spacing to 120px to prevent excessive overlap with new size */
+  /* UPDATED: Increased spacing multiplier from 95px to 160px 
+     to match the stack appearance in the reference image */
   transform: 
-    translateX(calc(var(--offset) * 120px + var(--drag-offset)))
+    translateX(calc(var(--offset) * 160px + var(--drag-offset)))
     translateZ(calc(var(--abs-offset) * -60px))
     rotateY(calc(var(--offset) * -16deg))
     scale(calc(1 - var(--abs-offset) * 0.12));
 
-  filter: brightness(calc(1 - var(--abs-offset) * 0.2)) drop-shadow(0 6px 14px rgba(42, 20, 16, 0.14));
+  filter: brightness(calc(1 - var(--abs-offset) * 0.2)); /* Removed drop-shadow here, using box-shadow on container instead */
 
   transition: 
     transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
@@ -107,10 +112,11 @@
   transition: filter 0.4s ease;
 }
 
+/* --- 3D FLIP ARCHITECTURE --- */
 .cardInner {
   position: relative;
   width: 100%;
-  height: 480px; /* Match wrapper height */
+  height: 100%;
   transform-style: preserve-3d;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -133,19 +139,27 @@
   transform: rotateY(180deg);
 }
 
+.imageContainer {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
 .cardImg {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
-/* =========================================================
-   INTERACTION LAYER
-   ========================================================= */
+/* --- 2D INTERACTION HIT LAYOUT --- */
 .interactionOverlay {
   position: absolute;
   width: 100%;
-  height: 480px; /* Match new card height */
+  height: 380px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -154,20 +168,19 @@
 
 .hitZone {
   position: absolute;
-  width: 220px; /* Match new card width */
-  height: 480px; /* Match new card height */
+  width: 160px; /* Match card width */
+  height: 380px; /* Match card height */
   cursor: pointer;
   background: transparent;
-  /* Sync with the new 120px spacing */
-  transform: translateX(calc(var(--offset) * 120px));
+  /* UPDATED: Sync spacing */
+  transform: translateX(calc(var(--offset) * 160px));
   z-index: 1;
 }
 
 .activeHitZone {
-  width: 220px; 
-  height: 480px;
   z-index: 5;
 }
+
 
 /* =========================================================
    MOBILE RESPONSIVE OVERRIDES (Unchanged as requested)
@@ -187,19 +200,12 @@
   .cardWrapper {
     width: 150px;
     height: 320px;
+    
     transform: 
       translateX(calc(var(--offset) * 60px + var(--drag-offset)))
       translateZ(calc(var(--abs-offset) * -40px))
       rotateY(calc(var(--offset) * -16deg))
       scale(calc(0.7 - var(--abs-offset) * 0.1));
-  }
-
-  .cardInner {
-    height: 260px;
-  }
-
-  .interactionOverlay {
-    height: 260px;
   }
 
   .hitZone {
@@ -212,7 +218,7 @@
     height: 180px;
   }
 
-  .h2 {
+  .h2{
     font-size: 14px;
   }
 }
