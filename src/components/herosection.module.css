@@ -1,31 +1,29 @@
+/* Container Layout */
 .hero {
   background-color: #f4ece0;
   width: 100%;
   min-height: 100vh;
-  box-sizing: border-box;
-  overflow-x: hidden;
+  display: flex;
+  flex-direction: column;
   padding-bottom: 40px;
+  box-sizing: border-box;
 }
 
-/* This container acts as the 'anchor' for your design */
-.heroWrapper {
-  max-width: 1200px;
-  margin: 0 auto; /* This keeps your design centered automatically */
-  width: 100%;
-}
-
+/* Navbar */
 .navbar {
   display: flex;
   justify-content: space-between;
-  padding-top: 30px;
+  align-items: center;
+  padding: 30px 4vw;
   width: 100%;
+  box-sizing: border-box;
 }
 
 .title {
   font-family: 'General Sans Light', sans-serif;
   font-size: 9px;
   font-weight: 500;
-  margin-left: 20px;
+  margin-left: 12px;
   color: #2A1410;
 }
 
@@ -33,7 +31,7 @@
   display: flex;
   align-items: center;
   gap: 6px;
-  padding-right: 20px;
+  padding-right: 4vw;
 }
 
 .bridge {
@@ -54,64 +52,79 @@
   width: auto;
 }
 
-.heroContent {
-  position: relative;
+/* Hero Main Content */
+.heroMain {
+  flex: 1;
   display: flex;
-  justify-content: center; /* Ensures the image/star block stays centered */
+  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  margin-top: 7%;
+  padding: 0 20px;
+  text-align: center;
 }
 
-.heroImage {
-  height: 135px;
-  object-fit: cover;
-  padding: 10px;
+.headline {
+  font-family: 'General Sans', sans-serif;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  color: #2A1410;
+  margin: 0 0 50px 0;
+  font-weight: 600;
 }
 
-.starElement {
+/* The Star Anchor */
+.mWrapper {
+  position: relative;
+  display: inline-block;
+}
+
+.star {
   position: absolute;
-  /* Instead of left: 43%, we center this relative to the heroContent wrapper */
-  top: 16px;
-  margin-left: 100px; /* Adjust this specific value to place it on the 'M' */
-  width: 33px;
+  top: -15px;    /* Adjust this to move the star vertically */
+  right: -28px;  /* Adjust this to move the star horizontally */
+  width: 35px;
   height: auto;
 }
 
-.heroFooter {
+/* Footer Section */
+.footerSection {
   display: flex;
-  justify-content: center; /* Keeps footer items centered */
   align-items: center;
-  margin-top: 50px;
+  justify-content: center;
   gap: 20px;
+  max-width: 600px;
 }
 
-.heroFooterImage {
-  height: 130px;
-  width: 130px;
+.footerImg {
+  width: 100px;
+  height: auto;
 }
 
-.heroFooterText {
+.footerText {
   font-family: 'General Sans', sans-serif;
-  font-size: 8px;
-  font-weight: 500;
+  font-size: 12px;
   color: #2A1410;
   text-align: left;
-  line-height: 1.4;
+  line-height: 1.5;
+  margin: 0;
 }
 
-/* RESPONSIVE */
+/* Responsive Overrides */
 @media (max-width: 768px) {
-  .heroContent { margin-top: 12%; }
-  .starElement { width: 24px; top: 12px; margin-left: 70px; }
-  
-  .heroFooter {
+  .footerSection {
     flex-direction: column;
     text-align: center;
   }
   
-  .heroFooterText {
+  .footerText {
     text-align: center;
-    padding: 0 20px;
+    padding-top: 15px;
     font-size: 11px;
+  }
+
+  .star {
+    width: 20px;
+    top: -8px;
+    right: -15px;
   }
 }
