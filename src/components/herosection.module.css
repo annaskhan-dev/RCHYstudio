@@ -75,7 +75,7 @@
   position: absolute;
   top: 20px;
   margin-left: -145px; 
-  width: 54px;
+  width: 56px;
   height: auto;
 }
 
@@ -91,7 +91,7 @@
 .heroFooterImage {
   height: 220px; 
   width: 220px;
-  margin-right: 10vw;
+  margin-right: 9vw;
 }
 
 .heroFooterText {
