@@ -25,7 +25,7 @@
   color: #2a1410;
   font-family: "Clash Display Medium", sans-serif;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 30px;
   text-align: center;
   line-height: 1.3;
   padding-top: 15px; 
@@ -39,8 +39,8 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1000px; 
-  height: 440px; 
+  max-width: 1200px; /* Increased max-width to fit larger cards */
+  height: 500px; 
   perspective: 1600px;
   z-index: 15;
 }
@@ -74,8 +74,8 @@
 /* --- CARD WRAPPER --- */
 .cardWrapper {
   position: absolute;
-  width: 200px; /* Increased size */
-  height: 450px; /* Increased size */
+  width: 240px; /* Increased size */
+  height: 500px; /* Increased size */
   background: transparent !important;
   display: flex;
   flex-direction: column;
@@ -83,9 +83,9 @@
   justify-content: center;
   perspective: 1000px;
 
-  /* Offset increased to 120px to account for new width */
+  /* Increased offset to 145px to prevent overlap at larger size */
   transform: 
-    translateX(calc(var(--offset) * 120px + var(--drag-offset)))
+    translateX(calc(var(--offset) * 145px + var(--drag-offset)))
     translateZ(calc(var(--abs-offset) * -60px))
     rotateY(calc(var(--offset) * -16deg))
     scale(calc(1 - var(--abs-offset) * 0.12));
@@ -105,7 +105,7 @@
 .cardInner {
   position: relative;
   width: 100%;
-  height: 450px; /* Increased size */
+  height: 500px; /* Increased size */
   transform-style: preserve-3d;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -149,7 +149,7 @@
 .interactionOverlay {
   position: absolute;
   width: 100%;
-  height: 450px; /* Increased size */
+  height: 500px; /* Increased size */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -162,13 +162,13 @@
   height: 320px;
   cursor: pointer;
   background: transparent; 
-  transform: translateX(calc(var(--offset) * 120px)); /* Offset increased */
+  transform: translateX(calc(var(--offset) * 145px)); /* Offset increased */
   z-index: 1; 
 }
 
 /* Matches the visible card dimension EXACTLY in both width and height */
 .activeHitZone {
-  width: 200px; /* Increased size */
+  width: 240px; /* Increased size */
   height: 200px;
   z-index: 5; 
 }
