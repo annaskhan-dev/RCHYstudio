@@ -125,7 +125,7 @@
   /* Reposition star to scale with the image */
   .starElement { 
     width: 20px;     /* Smaller star for mobile */
-    top: 5px;        /* Move up slightly */
+    top: 10px;        /* Move up slightly */
     margin-left: -60px; /* Adjusted to stay near the 'M' on smaller screens */
   }
 
@@ -147,7 +147,7 @@
   
   .heroFooterText {
     text-align: center;
-    padding: 0 7vw;
+    padding: 5vh 7vw;
     font-size: 13px !important;
     margin-right: 0 !important;
     max-width: 90% !important;
