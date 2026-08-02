@@ -191,8 +191,8 @@
   }
 
   .cardWrapper {
-    width: 150px;
-    height: 320px;
+    width: 180px;
+    height: 450px;
     
     transform: 
       translateX(calc(var(--offset) * 60px + var(--drag-offset)))
