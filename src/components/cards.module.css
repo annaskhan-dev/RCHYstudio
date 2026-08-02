@@ -168,8 +168,8 @@
 
 /* Matches the visible card dimension EXACTLY in both width and height */
 .activeHitZone {
-  width: 160px;   /* Exact width of your cardWrapper */
-  height: 200px;  /* Exact height of your cardWrapper */
+  width: 190px;   /* Exact width of your cardWrapper */
+  height: 230px;  /* Exact height of your cardWrapper */
   z-index: 5;     /* Layers it ABOVE the side hitZones so they never block its edges */
 }
 
