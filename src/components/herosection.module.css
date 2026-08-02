@@ -63,7 +63,7 @@
 }
 
 .heroImage {
-  height: 250px;
+  height: 230px;
   object-fit: cover;
   padding: 10px;
 }
@@ -72,7 +72,7 @@
 .starElement {
   position: absolute;
   top: 20px;
-  margin-left: 25px; 
+  margin-left: 250px; 
   width: 54px;
   height: auto;
 }
