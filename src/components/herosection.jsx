@@ -12,7 +12,6 @@ import Y from "../assets/BY.png";
 const HeroSection = () => {
   return (
     <section className={style.hero}>
-      {/* Wrapper ensures everything is constrained to the center */}
       <div className={style.heroWrapper}>
         <nav className={style.navbar}>
           <p className={style.title}>Mind The Gap</p>
