@@ -46,7 +46,7 @@
 .lettersWrapper {
   display: flex;
   align-items: center;
-  height: 25px;
+  height: 30px;
 }
 
 .logoLetter {
@@ -74,7 +74,7 @@
 .starElement {
   position: absolute;
   top: 20px;
-  margin-left: -125px; 
+  margin-left: -145px; 
   width: 54px;
   height: auto;
 }
