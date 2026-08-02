@@ -1,11 +1,9 @@
-
-/* =========================================================
-   BASE STYLES (Desktop)
-   ========================================================= */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent; /* Add this line */
+  outline: none; /* Add this line */
 }
 
 .cardsSection {
@@ -34,6 +32,7 @@
   margin-bottom: -10px; 
 }
 
+/* --- Carousel Wrapper --- */
 .carouselWrapper {
   position: relative;
   display: flex;
@@ -60,6 +59,7 @@
   cursor: grabbing;
 }
 
+/* --- VISUAL INTERFACE TRACK --- */
 .visualTrack {
   position: absolute;
   width: 100%;
@@ -71,6 +71,7 @@
   pointer-events: none;
 }
 
+/* --- CARD WRAPPER --- */
 .cardWrapper {
   position: absolute;
   width: 160px;
@@ -83,7 +84,7 @@
   perspective: 1000px;
 
   transform: 
-    translateX(calc(var(--offset) * 80px + var(--drag-offset)))
+    translateX(calc(var(--offset) * 95px + var(--drag-offset)))
     translateZ(calc(var(--abs-offset) * -60px))
     rotateY(calc(var(--offset) * -16deg))
     scale(calc(1 - var(--abs-offset) * 0.12));
@@ -95,14 +96,21 @@
     filter 0.4s ease;
 }
 
+.cardContainer.dragging .cardWrapper:not(.transitioning) {
+  transition: filter 0.4s ease;
+}
+
+/* --- 3D FLIP ARCHITECTURE --- */
 .cardInner {
   position: relative;
   width: 100%;
   height: 380px; 
   transform-style: preserve-3d;
+  /* Back to your elegant, smooth transition speed */
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
+/* Triggers flip when active zone is hovered */
 .centerCard.hovered .cardInner {
   transform: rotateY(180deg);
 }
@@ -121,16 +129,27 @@
   transform: rotateY(180deg);
 }
 
+.imageContainer {
+  width: 100%;
+  height: 100%; 
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: transparent;
+}
+
 .cardImg {
   width: 100%;
   height: 100%;
   object-fit: contain;
 }
 
+/* --- 2D INTERACTION HIT LAYOUT --- */
 .interactionOverlay {
   position: absolute;
   width: 100%;
-  height: 380px;
+  height: 380px;  /* Matches the exact cardWrapper height */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -143,15 +162,18 @@
   height: 320px;
   cursor: pointer;
   background: transparent; 
-  transform: translateX(calc(var(--offset) * 80px));
+  transform: translateX(calc(var(--offset) * 95px));
   z-index: 1; 
 }
 
+/* Matches the visible card dimension EXACTLY in both width and height */
 .activeHitZone {
-  width: 160px; 
-  height: 200px; 
-  z-index: 5; 
+  width: 160px;   /* Exact width of your cardWrapper */
+  height: 200px;  /* Exact height of your cardWrapper */
+  z-index: 5;     /* Layers it ABOVE the side hitZones so they never block its edges */
 }
+
+
 
 /* =========================================================
    MOBILE RESPONSIVE OVERRIDES
