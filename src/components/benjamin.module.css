@@ -31,9 +31,9 @@ body {
 .navtext1 {
   font-family: "General Sans bold", sans-serif;
   font-size: 9px;
-  font-weight: 530;
+  font-weight: 540;
   color: #2a1410;
-  width: 120px;
+  width: 60px;
   height: 6vh;
   background-color: #e8ddcc;
   display: flex;
