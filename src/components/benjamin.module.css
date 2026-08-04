@@ -8,15 +8,15 @@ body {
   width: 100%;
   min-height: 100vh;
   padding-bottom: 50px;
-
   
 }
 
 .bar {
-  height: 10px;
-  width: 50%;
-  margin-top: 40px;
-  padding-top: 40px;
+  height: 6px;
+  width: 45%;
+  border-radius: 0px;
+  margin-left: 70px;
+  margin-top: 30px;
 }
 
 .navtext {
