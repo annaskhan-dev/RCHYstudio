@@ -5,7 +5,7 @@
   font-weight: 500;
   font-size: 34px;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 120px;
 }
 .work {
   padding-bottom: 90px;
@@ -23,7 +23,7 @@
   margin: 0 auto;
 }
 .columnTrack {
-  width: 210px; /* Increased width */
+  width: 230px; /* Increased width */
   display: flex;
   flex-direction: column;
 }
