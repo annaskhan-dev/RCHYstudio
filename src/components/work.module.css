@@ -21,6 +21,7 @@
   gap: 14px;
   width: fit-content;
   margin: 0 auto;
+  margin-bottom: 100px;
 }
 .columnTrack {
   width: 230px; /* Increased width */
