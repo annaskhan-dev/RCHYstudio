@@ -15,8 +15,9 @@ body {
 .bar {
   height: 10px;
   width: 50%;
-  margin-top: 60px;
-  margin-left: 40px;
+  margin-top: 40px;
+  padding-top: 40px;
+  margin-left: 60px;
 }
 
 .navtext {
