@@ -12,11 +12,10 @@ body {
 }
 
 .bar {
-  height: 9px;
-  width: 50%;
+  height: 6px;
+  width: 45%;
   border-radius: 0px;
   margin-left: 70px;
-  padding-top: 30px;
   margin-top: 30px;
 }
 
