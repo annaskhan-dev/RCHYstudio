@@ -12,10 +12,10 @@ body {
 }
 
 .bar {
-  height: 6px;
-  width: 45%;
+  height: 10px;
+  width: 50%;
   border-radius: 0px;
-  margin-left: 70px;
+  margin-left: 10px;
   margin-top: 30px;
 }
 
@@ -31,9 +31,9 @@ body {
 .navtext1 {
   font-family: "General Sans bold", sans-serif;
   font-size: 9px;
-  font-weight: 540;
+  font-weight: 530;
   color: #2a1410;
-  width: 60px;
+  width: 120px;
   height: 6vh;
   background-color: #e8ddcc;
   display: flex;
