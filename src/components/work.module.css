@@ -39,7 +39,7 @@
 }
 .insidecontainer img {
   width: 100%;
-  height: 230px; /* Decreased height */
+  height: 270px; /* Decreased height */
   object-fit: cover;
   border-radius: 8px;
   display: block;
