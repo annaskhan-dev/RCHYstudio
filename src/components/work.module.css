@@ -8,7 +8,7 @@
   margin-bottom: 160px;
 }
 .work {
-  padding-bottom: 90px;
+  padding-bottom: 190px;
   background-color: #f9f3eb;
   width: 100%;
   box-sizing: border-box;
@@ -21,7 +21,6 @@
   gap: 14px;
   width: fit-content;
   margin: 0 auto;
-  margin-bottom: 100px;
 }
 .columnTrack {
   width: 230px; /* Increased width */
