@@ -67,12 +67,14 @@
       width: auto;      /* Prevents buttons from stretching to 100% width */
       margin-right: 0;  /* Removes the right margin so they stay left-aligned */
       text-align: left; /* Keeps text inside button aligned left */
+      font-family: "General sans";
     }
 
     .footertext {
       font-size: 45px; 
       padding-top: 50px;
       margin-left: 20px;
+      font-family: "Clash Display";
     }
 
     .footerlogo{
