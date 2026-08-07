@@ -31,7 +31,7 @@
 
   button{
       margin-right: 20px;
-      font-size: 23px;
+      font-size: 26px;
   }
 
   .footertext{
@@ -39,7 +39,7 @@
       font-family: "Clash Display";
       font-size: 90px;
       padding-top: 160px;
-      margin-left: 70px;
+      margin-left: 10vw;
       color: #F1B4B4;
   }
   /* =========================================================
