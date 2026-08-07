@@ -17,16 +17,15 @@ body {
   justify-content: center;
   margin-left: 20px;
   margin-right: 20px;
-  gap: 20px; /* Increased gap slightly for wider cards */
+  gap: 20px;
   margin-bottom: 130px;
 } 
 
-/* Increased card size to match your reference image */
 .imageWrapper {
   position: relative;
   width: 100%;
-  max-width: 300px; /* Increased width */
-  height: 520px;    /* Increased height */
+  max-width: 280px; 
+  height: 520px;    /* Matches the taller card aspect ratio from your image */
   border-radius: 20px;
   overflow: hidden;
 }
@@ -38,46 +37,29 @@ body {
   display: block;
 }
 
-/* Styling for the review text displayed inside the card */
-.quoteOverlay {
-  position: absolute;
-  top: 25px;
-  left: 0;
-  width: 100%;
-  padding: 0 20px;
-  box-sizing: border-box;
-  color: white;
-  font-family: General Sans, sans-serif;
-  font-size: 13px;
-  line-height: 1.4;
-  text-align: left;
-  z-index: 2;
-}
-
-/* Positioning the name/role at the bottom */
+/* Positioning the name and role neatly over the bottom of the image */
 .textOverlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 15px;
   text-align: center;
   color: white;
   box-sizing: border-box;
-  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* Optional gradient for text readability */
-  z-index: 2;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.75) 0%, rgba(0, 0, 0, 0.4) 60%, transparent 100%);
 }
 
 .name {
   margin: 0;
   font-weight: 500;
-  font-size: 14px; /* Slightly increased for readability */
+  font-size: 13px;
   font-family: General Sans, sans-serif;
 }
 
 .role {
-  margin: 5px 0 0 0;
-  font-size: 11px; /* Slightly increased for readability */
+  margin: 4px 0 0 0;
+  font-size: 10px;
   font-family: General Sans, sans-serif;
   color: #FBF6EECC;
   opacity: 0.9;
@@ -114,7 +96,7 @@ body {
   .imageWrapper {
     width: 92%;
     max-width: 300px;
-    height: 450px;
+    height: 440px;
   }
 
   .heading {
