@@ -177,48 +177,51 @@
 /* =========================================================
    MOBILE RESPONSIVE OVERRIDES
    ========================================================= */
+/* =========================================================
+   MOBILE RESPONSIVE OVERRIDES
+   ========================================================= */
 @media (max-width: 768px) {
   .cardsSection {
     padding-top: 40px; 
     min-height: auto;
-    padding-bottom: 40px;
+    padding-bottom: 6vh;
   }
 
   .carouselWrapper {
-    height: 320px; 
+    height: 380px; /* Slightly increased height to fit larger cards */
     perspective: 800px;
   }
 
   .cardWrapper {
-    width: 150px;
-    height: 320px;
+    width: 190px;  /* Increased from 150px */
+    height: 380px; /* Increased from 320px */
     
     transform: 
-      translateX(calc(var(--offset) * 60px + var(--drag-offset)))
+      translateX(calc(var(--offset) * 85px + var(--drag-offset))) /* Increased spacing from 60px to 85px */
       translateZ(calc(var(--abs-offset) * -40px))
       rotateY(calc(var(--offset) * -16deg))
       scale(calc(0.7 - var(--abs-offset) * 0.1));
   }
 
   .cardInner {
-    height: 260px;
+    height: 320px; /* Increased from 260px */
   }
 
   .interactionOverlay {
-    height: 260px;
+    height: 320px; /* Increased from 260px */
   }
 
   .hitZone {
-    height: 120px;
-    transform: translateX(calc(var(--offset) * 60px));
+    height: 150px; /* Adjusted to match larger card */
+    transform: translateX(calc(var(--offset) * 85px)); /* Match new spacing */
   }
 
   .activeHitZone {
-    width: 120px;
-    height: 180px;
+    width: 190px; /* Match new card width */
+    height: 220px; /* Increased from 180px */
   }
 
-  .h2{
+  .h2 {
     font-size: 16px;
   }
 }
