@@ -22,7 +22,7 @@
 
   nav{
       display: flex;
-      margin-left: 10vw;
+      margin-left: 8vw;
       padding-top: 10vh;
   }
 
@@ -40,7 +40,7 @@
       font-family: "Clash Display";
       font-size: 150px;
       padding-top: 35vh;
-      margin-left: 10vw;
+      margin-left: 8vw;
       color: #F1B4B4;
   }
   /* =========================================================
