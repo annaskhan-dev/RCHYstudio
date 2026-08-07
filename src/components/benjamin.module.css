@@ -43,7 +43,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 5px;
+  border-radius: 7px;
 }
 
 .navbar {
@@ -56,9 +56,9 @@ body {
 .text {
   font-family: "General Sans";
   color: #5e4a42;
-  font-size: 7px;
+  font-size: 12px;
   font-weight: 600;
-  margin-left: 70px;
+  margin-left:10vw;
   margin-top: 15px;
 }
 
