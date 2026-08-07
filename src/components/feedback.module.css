@@ -25,7 +25,8 @@ body {
 .imageWrapper {
   position: relative;
   width: 100%;
-
+  max-width: 275px; /* Same as your original image max-width */
+  height: 430px;    /* Same as your original image height */
 }
 
 .imagecontainer img {
@@ -33,8 +34,6 @@ body {
   height: 100%;
   object-fit: cover; /* Ensures image covers the space nicely */
   display: block;
-    max-width: 275px; /* Same as your original image max-width */
-  height: 430px;    /* Same as your original image height */
 }
 
 /* Positioning the text at the bottom */
