@@ -173,13 +173,8 @@
   z-index: 5;
 }
 
-/* Hidden by default on desktop */
-.mobileArrow {
-  display: none;
-}
-
 /* =========================================================
-   MOBILE RESPONSIVE OVERRIDES (With Centered Layout & Arrows)
+   MOBILE RESPONSIVE OVERRIDES
    ========================================================= */
 
 @media (max-width: 768px) {
@@ -187,26 +182,33 @@
     padding-top: 40px;
     min-height: auto;
     padding-bottom: 6vh;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .carouselWrapper {
     height: 380px;
     perspective: 800px;
     width: 100%;
-    justify-content: center; /* Center the card deck alignment */
+    overflow: hidden; /* Clips outer track overflow */
   }
 
   .cardContainer {
     width: 100%;
-    justify-content: center; /* Ensures the visual track sits dead-center */
+  }
+
+  .visualTrack,
+  .interactionOverlay {
+    width: 100%;
+    left: 0;
+    transform: none; /* Ensures tracks stay locked to true center */
   }
 
   .cardWrapper {
     width: 190px;
     height: 380px;
-    transform: translateX(calc(var(--offset) * 85px + var(--drag-offset)))
+    /* Adjusted multiplier from 85px to 115px to close the side gap */
+    transform: translateX(calc(50% - 95px + var(--offset) * 115px + var(--drag-offset)))
       translateZ(calc(var(--abs-offset) * -40px))
       rotateY(calc(var(--offset) * -16deg))
       scale(calc(0.7 - var(--abs-offset) * 0.1));
@@ -218,12 +220,11 @@
 
   .interactionOverlay {
     height: 320px;
-    justify-content: center;
   }
 
   .hitZone {
     height: 150px;
-    transform: translateX(calc(var(--offset) * 85px));
+    transform: translateX(calc(50% - 95px + var(--offset) * 115px));
   }
 
   .activeHitZone {
@@ -235,37 +236,5 @@
     font-size: 16px;
     padding-left: 15px;
     padding-right: 15px;
-  }
-
-  /* --- Mobile Navigation Arrows Styling --- */
-  .mobileArrow {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: 40px;
-    height: 40px;
-    background-color: rgba(42, 20, 16, 0.1);
-    border: none;
-    border-radius: 50%;
-    color: #2a1410;
-    font-size: 16px;
-    cursor: pointer;
-    z-index: 30;
-    transition: background-color 0.2s ease;
-  }
-
-  .mobileArrow:active {
-    background-color: rgba(42, 20, 16, 0.25);
-  }
-
-  .prevArrow {
-    left: 5px;
-  }
-
-  .nextArrow {
-    right: 5px;
   }
 }

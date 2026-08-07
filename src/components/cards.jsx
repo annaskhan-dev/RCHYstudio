@@ -102,14 +102,6 @@ const Cards = () => {
       </h2>
 
       <div className={style.carouselWrapper}>
-        {/* Mobile Navigation Arrows */}
-        <button className={`${style.mobileArrow} ${style.prevArrow}`} onClick={handlePrev} aria-label="Previous Card">
-          &#10094;
-        </button>
-        <button className={`${style.mobileArrow} ${style.nextArrow}`} onClick={handleNext} aria-label="Next Card">
-          &#10095;
-        </button>
-
         <div
           className={`${style.cardContainer} ${isDragging ? style.dragging : ""}`}
           onMouseDown={(e) => handleDragStart(e.clientX)}
