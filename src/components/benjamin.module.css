@@ -129,7 +129,6 @@ body {
   }
 
   .navtext1{
-    navtext1 {
-      padding: 5px 10px; /* Adjust padding for smaller screens */
+    padding: 8px 12px; /* Adjust padding for smaller screens */
   }
 }
