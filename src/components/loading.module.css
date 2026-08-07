@@ -71,7 +71,7 @@
 @keyframes dropY { 0% { transform: translateY(-100vh) rotate(38deg); opacity: 0; } 100% { transform: translateY(45px) rotate(38deg); opacity: 1; } }
 
 /* Letter Styles & Horizontal Positions Scaled Proportionally */
-.R { left: 25px; background-image: url("../assets/R.png"); animation: dropR 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.2s; }
+.R { left: 20px; background-image: url("../assets/R.png"); animation: dropR 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.2s; }
 .C { left: 122px; background-image: url("../assets/C.png"); animation: dropC 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.5s; }
 .H { left: 236px; background-image: url("../assets/H.png"); animation: dropH 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.8s; }
 .Y { left: 333px; background-image: url("../assets/Y.png"); animation: dropY 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 2.1s; }
