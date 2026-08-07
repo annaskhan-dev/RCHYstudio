@@ -15,7 +15,7 @@ body {
   height: 10px;
   width: 45%;
   border-radius: 0px;
-  margin-left:7vw;
+  margin-left:8vw;
   margin-top: 50px;
 }
 
@@ -25,7 +25,7 @@ body {
   font-weight: 730;
   letter-spacing: -1px;
   color: #2a1410;
-  margin-left:5vw;
+  margin-left:6vw;
   transform: scaleY(0.86); /* Adjust this value (e.g., 0.8, 0.9) to get the exact height you want */
   transform-origin: left top; /* Keeps the text aligned properly */
   
