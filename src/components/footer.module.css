@@ -71,13 +71,17 @@
     }
 
     .footertext {
-      font-size: 45px; 
+      font-size: 55px; 
       padding-top: 50px;
       margin-left: 20px;
     }
 
     .footerlogo{
       margin-bottom: 8%;
+    }
+
+    button{
+      fonrt-size: 20px;
     }
 
   }
