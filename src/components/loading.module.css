@@ -74,7 +74,7 @@
 .R { left: 45px; background-image: url("../assets/R.png"); animation: dropR 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.2s; }
 .C { left: 122px; background-image: url("../assets/C.png"); animation: dropC 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.5s; }
 .H { left: 236px; background-image: url("../assets/H.png"); animation: dropH 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.8s; }
-.Y { left: 300px; background-image: url("../assets/Y.png"); animation: dropY 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 2.1s; }
+.Y { left: 310px; background-image: url("../assets/Y.png"); animation: dropY 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 2.1s; }
 
 /* Responsive adjustments adjusted to match larger base size */
 @media (max-width: 768px) {
