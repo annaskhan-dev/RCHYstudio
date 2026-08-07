@@ -22,7 +22,6 @@
 
   nav{
       display: flex;
-      margin-left: 8vw;
       padding-top: 10vh;
   }
 
@@ -71,17 +70,13 @@
     }
 
     .footertext {
-      font-size: 55px; 
+      font-size: 45px; 
       padding-top: 50px;
       margin-left: 20px;
     }
 
     .footerlogo{
       margin-bottom: 8%;
-    }
-
-    button{
-      fonrt-size: 20px;
     }
 
   }
