@@ -35,10 +35,9 @@
   }
 
   .footertext{
-      
       font-family: "Clash Display";
-      font-size: 190px;
-      padding-top: 160px;
+      font-size: 160px;
+      padding-top: 60vh;
       margin-left: 10vw;
       color: #F1B4B4;
   }
