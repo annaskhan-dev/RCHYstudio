@@ -127,4 +127,9 @@ body {
     margin-top: 10px; /* Reset the heavy top margins */
     object-fit: cover;
   }
+
+  .navtext1{
+    navtext1 {
+      padding: 5px 10px; /* Adjust padding for smaller screens */
+  }
 }
