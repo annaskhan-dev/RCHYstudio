@@ -21,10 +21,10 @@ body {
 
 .navtext {
   font-family: "General Sans bold", sans-serif;
-  font-size: 20px;
-  font-weight: 700;
+  font-size: 40px;
+  font-weight: 900;
   color: #2a1410;
-  margin-left: 110px;
+  margin-left: 90px;
   
 }
 
@@ -46,7 +46,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  margin-right: 70px;
+  margin-right: 50px;
 }
 
 .text {
