@@ -1,58 +1,96 @@
 * {
   margin: 0;
+
   padding: 0;
+
   box-sizing: border-box;
+
   -webkit-tap-highlight-color: transparent;
+
   outline: none;
 }
 
 .cardsSection {
   background-color: #f9f3eb;
+
   min-height: 100vh;
+
   width: 100%;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
-  justify-content: flex-start; 
+
+  justify-content: flex-start;
+
   padding-top: 160px;
+
   overflow: hidden;
+
   user-select: none;
+
   position: relative;
+
   padding-bottom: 80px;
+
   z-index: 10;
 }
 
 .h2 {
   color: #2a1410;
+
   font-family: "Clash Display Medium", sans-serif;
+
   font-weight: 500;
+
   font-size: 34px;
+
   text-align: center;
+
   line-height: 1.2;
-  padding-top: 15px; 
-  margin-bottom: 10px; 
+
+  padding-top: 15px;
+
+  margin-bottom: 10px;
 }
 
 /* --- Carousel Wrapper --- */
+
 .carouselWrapper {
   position: relative;
+
   display: flex;
+
   justify-content: center;
+
   align-items: center;
+
   width: 100%;
-  max-width: 1200px;
-  height: 500px; 
+
+  max-width: 1200px; /* Increased max-width to fit larger cards */
+
+  height: 500px;
+
   perspective: 1600px;
+
   z-index: 15;
 }
 
 .cardContainer {
   position: relative;
+
   width: 100%;
-  height: 100%; 
+
+  height: 100%;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   cursor: grab;
 }
 
@@ -61,38 +99,57 @@
 }
 
 /* --- VISUAL INTERFACE TRACK --- */
+
 .visualTrack {
   position: absolute;
+
   width: 100%;
+
   height: 100%;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   transform-style: preserve-3d;
+
   pointer-events: none;
 }
 
 /* --- CARD WRAPPER --- */
+
 .cardWrapper {
   position: absolute;
-  width: 240px; 
-  height: 500px; 
+
+  width: 240px; /* Increased size */
+
+  height: 500px; /* Increased size */
+
   background: transparent !important;
+
   display: flex;
+
   flex-direction: column;
+
   align-items: center;
+
   justify-content: center;
+
   perspective: 1000px;
 
-  transform: 
-    translateX(calc(var(--offset) * 145px + var(--drag-offset)))
+  /* Increased offset to 145px to prevent overlap at larger size */
+
+  transform: translateX(calc(var(--offset) * 145px + var(--drag-offset)))
     translateZ(calc(var(--abs-offset) * -60px))
     rotateY(calc(var(--offset) * -16deg))
     scale(calc(1 - var(--abs-offset) * 0.12));
 
-  filter: brightness(calc(1 - var(--abs-offset) * 0.2)) drop-shadow(0 6px 14px rgba(42, 20, 16, 0.14));
+  filter: brightness(calc(1 - var(--abs-offset) * 0.2))
+    drop-shadow(0 6px 14px rgba(42, 20, 16, 0.14));
 
-  transition: 
+  transition:
     transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
     filter 0.4s ease;
 }
@@ -102,13 +159,20 @@
 }
 
 /* --- 3D FLIP ARCHITECTURE --- */
+
 .cardInner {
   position: relative;
+
   width: 100%;
-  height: 500px; 
+
+  height: 500px; /* Increased size */
+
   transform-style: preserve-3d;
+
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
+
+/* Triggers flip when active zone is hovered */
 
 .centerCard.hovered .cardInner {
   transform: rotateY(180deg);
@@ -116,11 +180,17 @@
 
 .cardFace {
   position: absolute;
+
   width: 100%;
+
   height: 100%;
+
   backface-visibility: hidden;
+
   -webkit-backface-visibility: hidden;
+
   top: 0;
+
   left: 0;
 }
 
@@ -130,126 +200,135 @@
 
 .imageContainer {
   width: 100%;
-  height: 100%; 
+
+  height: 100%;
+
   overflow: hidden;
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
+
   background: transparent;
 }
 
 .cardImg {
   width: 100%;
+
   height: 100%;
+
   object-fit: contain;
 }
 
 /* --- 2D INTERACTION HIT LAYOUT --- */
+
 .interactionOverlay {
   position: absolute;
+
   width: 100%;
-  height: 500px; 
+
+  height: 500px; /* Increased size */
+
   display: flex;
+
   align-items: center;
+
   justify-content: center;
-  z-index: 20; 
+
+  z-index: 20;
 }
 
 .hitZone {
   position: absolute;
+
   width: 100px;
+
   height: 320px;
+
   cursor: pointer;
-  background: transparent; 
-  transform: translateX(calc(var(--offset) * 145px)); 
-  z-index: 1; 
+
+  background: transparent;
+
+  transform: translateX(calc(var(--offset) * 145px)); /* Offset increased */
+
+  z-index: 1;
 }
+
+/* Matches the visible card dimension EXACTLY in both width and height */
 
 .activeHitZone {
-  width: 240px; 
-  height: 200px;
-  z-index: 5; 
-}
+  width: 240px; /* Increased size */
 
-/* --- Navigation Arrows Base (Hidden on Desktop) --- */
-.carouselNav {
-  display: none;
+  height: 200px;
+
+  z-index: 5;
 }
 
 /* =========================================================
+
    MOBILE RESPONSIVE OVERRIDES
+
    ========================================================= */
+
 @media (max-width: 768px) {
   .cardsSection {
-    padding-top: 40px; 
+    padding-top: 40px;
+
     min-height: auto;
+
     padding-bottom: 6vh;
-    padding-left: 24px;  
-    padding-right: 24px; 
+
+    padding-left: 20px; /* Added left padding */
+
+    padding-right: 20px; /* Added right padding */
   }
 
   .carouselWrapper {
-    height: 380px; 
+    height: 380px;
+
     perspective: 800px;
-    width: 100%; 
+
+    width: 100%; /* Ensures it respects the section padding */
   }
 
   .cardWrapper {
-    width: 190px;  
-    height: 380px; 
-    
-    transform: 
-      translateX(calc(var(--offset) * 85px + var(--drag-offset)))
+    width: 190px;
+
+    height: 380px;
+
+    transform: translateX(calc(var(--offset) * 85px + var(--drag-offset)))
       translateZ(calc(var(--abs-offset) * -40px))
       rotateY(calc(var(--offset) * -16deg))
       scale(calc(0.7 - var(--abs-offset) * 0.1));
   }
 
   .cardInner {
-    height: 320px; 
+    height: 320px;
   }
 
   .interactionOverlay {
-    height: 320px; 
+    height: 320px;
   }
 
   .hitZone {
-    height: 150px; 
-    transform: translateX(calc(var(--offset) * 85px)); 
+    height: 150px;
+
+    transform: translateX(calc(var(--offset) * 85px));
   }
 
   .activeHitZone {
-    width: 190px; 
-    height: 220px; 
+    width: 190px;
+
+    height: 220px;
   }
 
   .h2 {
     font-size: 16px;
+
     padding-left: 15px;
+
     padding-right: 15px;
-  }
-
-  /* --- Mobile Navigation Arrows --- */
-  .carouselNav {
-    display: flex;
-    justify-content: center;
-    gap: 20px;
-    margin-top: 20px;
-    z-index: 30;
-  }
-
-  .navBtn {
-    background-color: #2a1410;
-    color: #f9f3eb;
-    border: none;
-    width: 44px;
-    height: 44px;
-    border-radius: 50%;
-    font-size: 18px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
   }
 }
