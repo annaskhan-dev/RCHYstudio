@@ -102,14 +102,12 @@
 
  /* PERFECTED MOBILE VIEW */
 @media (max-width: 768px) {
-  /* Fix the navbar */
   .navbar { 
     padding-top: 30px; 
     padding-left: 5vw; 
     padding-right: 5vw; 
   }
 
-  /* Fix main content: stop overflowing */
   .heroContent { 
     margin-top: 10%; 
     padding: 0 10px;
@@ -149,5 +147,6 @@
     font-size: 13px !important;
     margin-right: 0 !important;
     max-width: 90% !important;
+    font-family: 'General Sans', sans-serif;
   }
 }
