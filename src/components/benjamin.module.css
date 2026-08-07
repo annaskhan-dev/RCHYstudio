@@ -128,7 +128,7 @@ body {
     object-fit: cover;
   }
 
-  navtext {
-    font-size: 20px; /* Reduce font size for smaller screens */
+  .navtext1{
+    font-size: 14px; /* Reduce font size for smaller screens */
   }
 }
