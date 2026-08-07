@@ -17,47 +17,67 @@ body {
   justify-content: center;
   margin-left: 20px;
   margin-right: 20px;
-  gap: 10px;
+  gap: 20px; /* Increased gap slightly for wider cards */
   margin-bottom: 130px;
 } 
 
-/* This is the new wrapper for the image + text */
+/* Increased card size to match your reference image */
 .imageWrapper {
   position: relative;
   width: 100%;
-  max-width: 275px; /* Same as your original image max-width */
-  height: 430px;    /* Same as your original image height */
+  max-width: 300px; /* Increased width */
+  height: 520px;    /* Increased height */
+  border-radius: 20px;
+  overflow: hidden;
 }
 
 .imagecontainer img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures image covers the space nicely */
+  object-fit: cover;
   display: block;
 }
 
-/* Positioning the text at the bottom */
+/* Styling for the review text displayed inside the card */
+.quoteOverlay {
+  position: absolute;
+  top: 25px;
+  left: 0;
+  width: 100%;
+  padding: 0 20px;
+  box-sizing: border-box;
+  color: white;
+  font-family: General Sans, sans-serif;
+  font-size: 13px;
+  line-height: 1.4;
+  text-align: left;
+  z-index: 2;
+}
+
+/* Positioning the name/role at the bottom */
 .textOverlay {
   position: absolute;
   bottom: 0;
   left: 0;
   width: 100%;
-  padding: 15px;
+  padding: 20px;
   text-align: center;
-  color: white; /* Or #2a1410 if you prefer dark text */
+  color: white;
   box-sizing: border-box;
+  background: linear-gradient(to top, rgba(0,0,0,0.8), transparent); /* Optional gradient for text readability */
+  z-index: 2;
 }
 
 .name {
   margin: 0;
   font-weight: 500;
-  font-size: 10px;
+  font-size: 14px; /* Slightly increased for readability */
   font-family: General Sans, sans-serif;
 }
 
 .role {
   margin: 5px 0 0 0;
-  font-size: 8px;
+  font-size: 11px; /* Slightly increased for readability */
   font-family: General Sans, sans-serif;
   color: #FBF6EECC;
   opacity: 0.9;
@@ -67,11 +87,17 @@ body {
    RESPONSIVE OVERRIDES
    ========================================================= */
 
+@media (max-width: 1024px) {
+  .imagecontainer {
+    flex-wrap: wrap;
+  }
+}
+
 @media (max-width: 768px) {
   .imagecontainer {
     flex-direction: column;
     align-items: center;
-    gap: 16px;
+    gap: 20px;
     margin-left: 0;
     margin-right: 0;
     margin-bottom: 50px;
@@ -80,12 +106,7 @@ body {
   .imageWrapper {
     width: 90%;
     max-width: 340px;
-    height: auto;
-  }
-
-  .imagecontainer img {
-    height: auto;
-    object-fit: contain;
+    height: 480px;
   }
 }
 
@@ -93,9 +114,10 @@ body {
   .imageWrapper {
     width: 92%;
     max-width: 300px;
+    height: 450px;
   }
 
   .heading {
-    font-size: 14px;
+    font-size: 24px;
   }
 }
