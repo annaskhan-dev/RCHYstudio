@@ -127,4 +127,8 @@ body {
     margin-top: 10px; /* Reset the heavy top margins */
     object-fit: cover;
   }
+
+  navtext {
+    font-size: 20px; /* Reduce font size for smaller screens */
+  }
 }
