@@ -174,30 +174,38 @@
   z-index: 5; 
 }
 
-/* =========================================================
-   MOBILE RESPONSIVE OVERRIDES
-   ========================================================= */
-@media (max-width: 768px) {
+/@media (max-width: 768px) {
   .cardsSection {
     padding-top: 40px; 
     min-height: auto;
     padding-bottom: 40px;
+    padding-left: 0;
+    padding-right: 0;
   }
 
   .carouselWrapper {
     height: 320px; 
     perspective: 800px;
+    width: 100vw;
+    max-width: 100vw;
+    overflow: hidden;
+  }
+
+  .cardContainer {
+    width: 100vw;
   }
 
   .cardWrapper {
     width: 150px;
     height: 320px;
+    margin: 0;
+    padding: 0;
     
     transform: 
-      translateX(calc(var(--offset) * 60px + var(--drag-offset)))
+      translateX(calc(var(--offset) * 110px + var(--drag-offset)))
       translateZ(calc(var(--abs-offset) * -40px))
       rotateY(calc(var(--offset) * -16deg))
-      scale(calc(0.7 - var(--abs-offset) * 0.1));
+      scale(calc(0.8 - var(--abs-offset) * 0.1));
   }
 
   .cardInner {
@@ -206,19 +214,22 @@
 
   .interactionOverlay {
     height: 260px;
+    width: 100vw;
   }
 
   .hitZone {
     height: 120px;
-    transform: translateX(calc(var(--offset) * 60px));
+    transform: translateX(calc(var(--offset) * 110px));
   }
 
   .activeHitZone {
-    width: 120px;
+    width: 150px;
     height: 180px;
   }
 
-  .h2{
+  .h2 {
     font-size: 16px;
+    padding-left: 15px;
+    padding-right: 15px;
   }
 }
