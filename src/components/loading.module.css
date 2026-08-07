@@ -32,6 +32,7 @@
 }
 
 .bridge {
+  /* Scaled up to 150px */
   height: 150px;
   width: auto;
   animation: dropBridge 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards;
@@ -40,9 +41,10 @@
 
 .lettersWrapper {
   position: relative;
-  /* Slightly reduced total width to pull outer letters closer */
-  width: 400px;
+  /* Scaled width and height accordingly */
+  width: 440px;
   height: 105px; 
+  /* Scaled negative margin to -255px */
   margin-top: -255px; 
   display: flex;
   justify-content: center;
@@ -50,6 +52,7 @@
 }
 
 .letter {
+  /* Scaled letter dimensions */
   height: 105px;
   width: 96px;
   position: absolute;
@@ -60,20 +63,20 @@
   transform-origin: bottom center;
 }
 
-/* Keyframes */
+/* Keyframes - translation distances scaled up proportionally */
 @keyframes dropBridge { 0% { transform: translateY(-100vh); opacity: 0; } 100% { transform: translateY(0); opacity: 1; } }
 @keyframes dropR { 0% { transform: translateY(-100vh) rotate(-38deg); opacity: 0; } 100% { transform: translateY(45px) rotate(-38deg); opacity: 1; } }
 @keyframes dropC { 0% { transform: translateY(-100vh) rotate(-8deg); opacity: 0; } 100% { transform: translateY(-9px) rotate(-8deg); opacity: 1; } }
 @keyframes dropH { 0% { transform: translateY(-100vh) rotate(8deg); opacity: 0; } 100% { transform: translateY(-9px) rotate(8deg); opacity: 1; } }
 @keyframes dropY { 0% { transform: translateY(-100vh) rotate(38deg); opacity: 0; } 100% { transform: translateY(45px) rotate(38deg); opacity: 1; } }
 
-/* Letter Styles & Adjusted Horizontal Positions */
-.R { left: 45px; background-image: url("../assets/R.png"); animation: dropR 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.2s; }
-.C { left: 115px; background-image: url("../assets/C.png"); animation: dropC 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.5s; }
-.H { left: 185px; background-image: url("../assets/H.png"); animation: dropH 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.8s; }
-.Y { left: 255px; background-image: url("../assets/Y.png"); animation: dropY 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 2.1s; }
+/* Letter Styles & Horizontal Positions Scaled Proportionally */
+.R { left: 25px; background-image: url("../assets/R.png"); animation: dropR 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.2s; }
+.C { left: 122px; background-image: url("../assets/C.png"); animation: dropC 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.5s; }
+.H { left: 236px; background-image: url("../assets/H.png"); animation: dropH 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 1.8s; }
+.Y { left: 333px; background-image: url("../assets/Y.png"); animation: dropY 1.2s cubic-bezier(0.25, 1, 0.5, 1) forwards 2.1s; }
 
-/* Responsive adjustments */
+/* Responsive adjustments adjusted to match larger base size */
 @media (max-width: 768px) {
   .brandContainer {
     transform: translate(-50%, -50%) scale(0.35);
