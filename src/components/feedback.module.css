@@ -5,8 +5,8 @@ body {
 .heading {
   color: #2a1410;
   font-family: "Clash Display Medium", sans-serif;
-  font-weight: 549;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 34px;
   text-align: center;
   margin-top: 60px;
   margin-bottom: 55px;
@@ -25,8 +25,8 @@ body {
 .imageWrapper {
   position: relative;
   width: 100%;
-  max-width: 175px; /* Same as your original image max-width */
-  height: 330px;    /* Same as your original image height */
+  max-width: 14vw; /* Same as your original image max-width */
+  height: 20vh;    /* Same as your original image height */
 }
 
 .imagecontainer img {
