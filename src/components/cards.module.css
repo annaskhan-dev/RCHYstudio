@@ -14,7 +14,7 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start; 
-  padding-top:160px;
+  padding-top: 160px;
   overflow: hidden;
   user-select: none;
   position: relative;
@@ -40,7 +40,7 @@
   justify-content: center;
   align-items: center;
   width: 100%;
-  max-width: 1200px; /* Increased max-width to fit larger cards */
+  max-width: 1200px;
   height: 500px; 
   perspective: 1600px;
   z-index: 15;
@@ -75,8 +75,8 @@
 /* --- CARD WRAPPER --- */
 .cardWrapper {
   position: absolute;
-  width: 240px; /* Increased size */
-  height: 500px; /* Increased size */
+  width: 240px;
+  height: 500px;
   background: transparent !important;
   display: flex;
   flex-direction: column;
@@ -84,7 +84,6 @@
   justify-content: center;
   perspective: 1000px;
 
-  /* Increased offset to 145px to prevent overlap at larger size */
   transform: 
     translateX(calc(var(--offset) * 145px + var(--drag-offset)))
     translateZ(calc(var(--abs-offset) * -60px))
@@ -106,12 +105,11 @@
 .cardInner {
   position: relative;
   width: 100%;
-  height: 500px; /* Increased size */
+  height: 500px;
   transform-style: preserve-3d;
   transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-/* Triggers flip when active zone is hovered */
 .centerCard.hovered .cardInner {
   transform: rotateY(180deg);
 }
@@ -150,7 +148,7 @@
 .interactionOverlay {
   position: absolute;
   width: 100%;
-  height: 500px; /* Increased size */
+  height: 500px;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -163,17 +161,19 @@
   height: 320px;
   cursor: pointer;
   background: transparent; 
-  transform: translateX(calc(var(--offset) * 145px)); /* Offset increased */
+  transform: translateX(calc(var(--offset) * 145px));
   z-index: 1; 
 }
 
-/* Matches the visible card dimension EXACTLY in both width and height */
 .activeHitZone {
-  width: 240px; /* Increased size */
+  width: 240px;
   height: 200px;
   z-index: 5; 
 }
 
+/* =========================================================
+   MOBILE RESPONSIVE OVERRIDES
+   ========================================================= */
 @media (max-width: 768px) {
   .cardsSection {
     padding-top: 40px; 
@@ -196,13 +196,13 @@
   }
 
   .cardWrapper {
-    width: 150px;
-    height: 320px;
+    width: 110px;
+    height: 260px;
     margin: 0;
     padding: 0;
     
     transform: 
-      translateX(calc(var(--offset) * 110px + var(--drag-offset)))
+      translateX(calc(var(--offset) * 32vw + var(--drag-offset)))
       translateZ(calc(var(--abs-offset) * -40px))
       rotateY(calc(var(--offset) * -16deg))
       scale(calc(0.8 - var(--abs-offset) * 0.1));
@@ -219,11 +219,11 @@
 
   .hitZone {
     height: 120px;
-    transform: translateX(calc(var(--offset) * 110px));
+    transform: translateX(calc(var(--offset) * 32vw));
   }
 
   .activeHitZone {
-    width: 150px;
+    width: 110px;
     height: 180px;
   }
 
