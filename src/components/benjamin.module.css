@@ -11,12 +11,12 @@ body {
 }
 
 .bar {
-  height: 9px;
+  height: 10px;
   width: 45%;
   border-radius: 0px;
-  margin-left: 10px;
+  margin-left: 20px;
   margin-top: 30px;
-  paddding-top: 10px;
+  paddding-top: 20px;
 }
 
 .navtext {
