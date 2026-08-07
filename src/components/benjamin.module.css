@@ -129,5 +129,10 @@ body {
   }
 
   .navtext1{
+    padding: 8px 12px; /* Adjust padding for smaller screens */
+    text-align: center; /* Center text */
+    font-size: 14px; /* Slightly smaller font size */
+    
   }
+
 }
