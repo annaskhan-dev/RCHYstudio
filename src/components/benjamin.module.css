@@ -21,11 +21,11 @@ body {
 
 .navtext {
   font-family: "General Sans bold", sans-serif;
-  font-size: 25px;
+  font-size: 27px;
   font-weight: 700;
   color: #2a1410;
   margin-left: 65px;
-  transform: scaleY(0.8); /* Adjust this value (e.g., 0.8, 0.9) to get the exact height you want */
+  transform: scaleY(0.9); /* Adjust this value (e.g., 0.8, 0.9) to get the exact height you want */
   transform-origin: left top; /* Keeps the text aligned properly */
   
 }
