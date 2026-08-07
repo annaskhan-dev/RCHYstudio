@@ -22,8 +22,8 @@ body {
 .navtext {
   font-family: "General Sans bold", sans-serif;
   font-size: 29px;
-  font-weight: 700;
-  letter-spacing: -0.5px;
+  font-weight: 730;
+  letter-spacing: -1px;
   color: #2a1410;
   margin-left: 65px;
   transform: scaleY(0.86); /* Adjust this value (e.g., 0.8, 0.9) to get the exact height you want */
