@@ -37,10 +37,10 @@
   .footertext{
       font-family: "Clash Display";
       font-size: 170px;
-      padding-top: 40vh;
+      padding-top: 38vh;
       margin-left: 10vw;
       color: #F1B4B4;
-      padding-bottom: 20px;
+      padding-bottom: 4vh;
   }
   /* =========================================================
     RESPONSIVE OVERRIDES (Add this to the bottom of your file)
