@@ -171,9 +171,6 @@
   z-index: 5; 
 }
 
-/* =========================================================
-   MOBILE RESPONSIVE OVERRIDES
-   ========================================================= */
 @media (max-width: 768px) {
   .cardsSection {
     padding-top: 40px; 
