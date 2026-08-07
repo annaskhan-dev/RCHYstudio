@@ -9,7 +9,7 @@ import orangeflip from "../assets/orange-flip.svg";
 import beigeflip from "../assets/beigeflip.svg";
 import blueflip from "../assets/blueflip.svg";
 import greenflip from "../assets/greenflip.svg";
-import brownflip from "../assets/brownflip.svg";
+import brownflip from "../assets/brown-flip.svg";
 
 const cardData = [
   { id: 0, title: "BRANDING & ADVERTISING", img: orange, imgFlip: orangeflip },
@@ -78,23 +78,20 @@ const Cards = () => {
     }, 400);
   };
 
-const handleHitZoneClick = (offset, index) => {
-  // If we just finished a drag, don't trigger the click
-  if (hasDraggedRef.current) return;
+  const handleHitZoneClick = (offset, index) => {
+    if (hasDraggedRef.current) return;
 
-  if (offset === 0) {
-    // If it's the center card, toggle the flip state
-    setIsCenterHovered(prev => !prev);
-  } else {
-    // If it's a side card, move it to center and reset flip
-    setIsTransitioning(true);
-    setActiveIndex(index);
-    setIsCenterHovered(false); 
-    setTimeout(() => {
-      setIsTransitioning(false);
-    }, 400);
-  }
-};
+    if (offset === 0) {
+      setIsCenterHovered(prev => !prev);
+    } else {
+      setIsTransitioning(true);
+      setActiveIndex(index);
+      setIsCenterHovered(false); 
+      setTimeout(() => {
+        setIsTransitioning(false);
+      }, 400);
+    }
+  };
 
   return (
     <div className={style.cardsSection}>
@@ -197,8 +194,17 @@ const handleHitZoneClick = (offset, index) => {
               );
             })}
           </div>  
-
         </div>
+      </div>
+
+      {/* Mobile Navigation Arrows */}
+      <div className={style.carouselNav}>
+        <button className={style.navBtn} onClick={handlePrev} aria-label="Previous Card">
+          &#8592;
+        </button>
+        <button className={style.navBtn} onClick={handleNext} aria-label="Next Card">
+          &#8594;
+        </button>
       </div>
     </div>
   );
