@@ -14,14 +14,15 @@
   width: 210px;
 }
 
+
 nav {
   display: flex;
   padding-top: 10vh;
-  padding-left: 7vw;
+  padding-left: 2vw;
 }
 
 .buttondiv {
-  margin-left: 40vw;
+  margin-left: 43vw;
   display: flex;
 }
 
@@ -30,7 +31,7 @@ button {
   border: none;
   color: white;
   font-family: "General Sans", sans-serif; /* Added fallback */
-  margin-right: 30px;
+  margin-right: 10px;
   font-size: 26px;
 }
 
@@ -39,7 +40,7 @@ button {
   font-size: 150px;
   font-weight: 490;
   padding-top: 35vh;
-  margin-left: 8vw;
+  margin-left: 2vw;
   color: #f1b4b4;
 }
 
