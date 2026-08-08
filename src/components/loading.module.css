@@ -81,6 +81,6 @@
 @media (max-width: 768px) {
   .brandContainer {
     /* Increased scale to make it bigger, adjusted vertical position (-65%) to shift it up */
-    transform: translate(-50%, -65%) scale(0.55);
+    transform: translate(-50%, -35%) scale(0.55);
   }
 }
