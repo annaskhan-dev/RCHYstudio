@@ -103,6 +103,10 @@
 
 /* PERFECTED MOBILE VIEW */
 @media (max-width: 768px) {
+  .hero {
+    min-height: auto; /* Prevents empty space from forced screen height */
+    padding-bottom: 0;
+  }
   .navbar { 
     padding-top: 30px; 
     padding-left: 5vw; 
@@ -146,7 +150,7 @@
   
   .heroFooterText {
     text-align: center;
-    padding: 4vh 7vw;
+    padding: 4vh 7vw 0vh;
     font-size: 13px !important;
     max-width: 90% ;
     font-family: 'General Sans', sans-serif;
