@@ -122,8 +122,8 @@
   /* Reposition star to scale with the image */
   .starElement { 
     width: 20px;     /* Smaller star for mobile */
-    top: 10px;        /* Move up slightly */
-    margin-left: -1em;  /* Adjusted to stay near the 'M' on smaller screens */
+    top: 8px;        /* Move up slightly */
+    margin-left: -1.1em;  /* Adjusted to stay near the 'M' on smaller screens */
   }
 
   /* Fix footer alignment */
