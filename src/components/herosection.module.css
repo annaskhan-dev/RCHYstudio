@@ -4,7 +4,7 @@
     min-height: 100vh;
     box-sizing: border-box;
     overflow-x: hidden;
-    padding-bottom: 80px;
+    padding-bottom: 60px;
   }
 
   .heroWrapper {
@@ -64,7 +64,7 @@
     height: 30vh;
     object-fit: cover;
     padding: 10px;
-    margin-left: 11vw;
+    margin-left: 10vw;
   }
 
   .starElement {
