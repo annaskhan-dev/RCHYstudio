@@ -157,7 +157,7 @@
     font-weight: 500;
   }
 
-  .logocontainer {
+  .logoContainer {
     transform: translateX(0); /* Center the logo on mobile */
   }
 }
