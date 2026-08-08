@@ -18,11 +18,11 @@
 nav {
   display: flex;
   padding-top: 10vh;
-  padding-left: 2vw;
+  padding-left: 3vw;
 }
 
 .buttondiv {
-  margin-left: 43vw;
+  margin-left: 48vw;
   display: flex;
 }
 
@@ -40,7 +40,7 @@ button {
   font-size: 150px;
   font-weight: 490;
   padding-top: 35vh;
-  margin-left: 2vw;
+  margin-left: 3vw;
   color: #f1b4b4;
 }
 
