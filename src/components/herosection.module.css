@@ -101,7 +101,7 @@
     margin-right: 3vw;
   }
 
- /* PERFECTED MOBILE VIEW */
+/* PERFECTED MOBILE VIEW */
 @media (max-width: 768px) {
   .navbar { 
     padding-top: 30px; 
@@ -117,6 +117,7 @@
   .heroImage { 
     width: 90%;      /* Image scales to fit screen */
     height: auto;    /* Prevents distortion */
+    margin-left: 0;  /* Removes desktop offset to center the image */
   }
 
   /* Reposition star to scale with the image */
