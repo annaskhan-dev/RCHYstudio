@@ -30,6 +30,7 @@
     display: flex;
     align-items: center;
     gap: 8px;
+    margin-right: 10px;
     }
 
   .bridge {
@@ -42,7 +43,7 @@
     display: flex;
     align-items: center;
     height: 28px;
-    margin-right: 0.5vw;
+    
   }
 
   .logoLetter {
