@@ -34,7 +34,7 @@ button {
 }
 
 .footertext {
-  font-family: "Clash Display";
+  font-family: "Clash Display" !important;
   font-size: 150px;
   padding-top: 35vh;
   margin-left: 8vw;
@@ -65,13 +65,14 @@ button {
     width: auto; /* Prevents buttons from stretching to 100% width */
     margin-right: 0; /* Removes the right margin so they stay left-aligned */
     text-align: left; /* Keeps text inside button aligned left */
-    font-family: "General sans";
+    font-family: "General sans" !important;
   }
 
   .footertext {
     font-size: 45px;
     padding-top: 50px;
     margin-left: 20px;
+    font-family: "Clash Display" !important;
   }
 
   .footerlogo {
@@ -80,8 +81,5 @@ button {
 
   button {
     font-size: 15px;
-  }
-  .footertext {
-    font-family: "Clash Display";
   }
 }
