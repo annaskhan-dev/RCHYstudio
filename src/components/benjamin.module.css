@@ -8,13 +8,14 @@ body {
   width: 100%;
   min-height: 100vh;
   padding-bottom: 90px;
+  
 }
 
 .bar {
   height: 10px;
   width: 45%;
   border-radius: 0px;
-  margin-left: 7.7vw;
+  margin-left:7.7vw;
   margin-top: 50px;
 }
 
@@ -24,9 +25,10 @@ body {
   font-weight: 730;
   letter-spacing: -1px;
   color: #2a1410;
-  margin-left: 4.7vw;
-  transform: scaleY(0.86);
-  transform-origin: left top;
+  margin-left:4.7vw;
+  transform: scaleY(0.86); /* Adjust this value (e.g., 0.8, 0.9) to get the exact height you want */
+  transform-origin: left top; /* Keeps the text aligned properly */
+  
 }
 
 .navtext1 {
@@ -55,7 +57,7 @@ body {
   color: #5e4a42;
   font-size: 13px;
   font-weight: 600;
-  margin-left: 9vw;
+  margin-left:9vw;
   margin-top: 15px;
 }
 
@@ -64,12 +66,12 @@ body {
   display: flex;
   gap: 17px;
   margin-left: 9.5vw;
-}
 
+}
 .image1 {
   width: 360px;
   height: 310px;
-  border-radius: 2px;
+  border-radius: 2px; 
   margin-top: 26vh;
 }
 
@@ -77,15 +79,16 @@ body {
   height: 400px;
   width: 560px;
   border-radius: 0.2px;
-  margin-top: 14vh;
+  margin-top:14vh ;
 }
 
 .image3 {
-  height: 380px;
-  width: 330px;
-  margin-top: 16vh;
-  border-radius: 2px;
+    height: 380px;
+    width: 330px;
+    margin-top: 16vh;
+    border-radius: 2px;
 }
+
 
 /* =========================================================
    RESPONSIVE OVERRIDES
