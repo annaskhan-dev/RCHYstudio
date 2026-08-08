@@ -124,7 +124,7 @@
   .starElement { 
     width: 20px;     /* Smaller star for mobile */
     top: 12px;        /* Move up slightly */
-    margin-left: -2.8em;  /* Adjusted to stay near the 'M' on smaller screens */
+    margin-left: -3.2em;  /* Adjusted to stay near the 'M' on smaller screens */
   }
 
   /* Fix footer alignment */
