@@ -35,9 +35,9 @@ button {
 }
 
 .footertext {
-  font-family: "Clash Display", sans-serif !important; /* Added fallback */
+  font-family: "Clash Display", bold, sans-serif !important;
   font-size: 150px;
-  font-weight: 500;
+  font-weight: 600;
   padding-top: 35vh;
   margin-left: 8vw;
   color: #f1b4b4;
