@@ -54,7 +54,7 @@ button {
   nav {
     margin-left: 20px;
     flex-direction: column;
-    align-items: flex-start; /* This aligns everything (logo and buttons) to the left */
+    align-items: flex-start;
     gap: 25px;
   }
 
@@ -62,18 +62,20 @@ button {
     display: none;
   }
 
+  /* Combined button styles into a single block with explicit font rules */
   button {
-    width: auto; /* Prevents buttons from stretching to 100% width */
-    margin-right: 0; /* Removes the right margin so they stay left-aligned */
-    text-align: left; /* Keeps text inside button aligned left */
+    width: auto;
+    margin-right: 0;
+    text-align: left;
     font-family: "General sans" !important;
+    font-size: 15px;
   }
 
   .footertext {
     font-size: 45px;
     padding-top: 50px;
     margin-left: 20px;
-    font-family: "Clash Display" !important;
+    font-family: "Clash Display" !important; /* Explicitly forced here */
   }
 
   .footerlogo {
