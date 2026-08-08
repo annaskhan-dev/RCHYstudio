@@ -31,7 +31,7 @@ button {
   border: none;
   color: white;
   font-family: "General Sans", sans-serif; /* Added fallback */
-  margin-right: 15px;
+  margin-right: 5px;
   font-size: 22px;
 }
 
