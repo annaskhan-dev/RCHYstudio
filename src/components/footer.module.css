@@ -1,3 +1,6 @@
+/* 1. MAKE SURE YOUR FONT IMPORTS ARE HERE AT THE TOP */
+@import url('https://api.fontshare.com/v2/css?f[]=clash-display@400,700&f[]=general-sans@400,500,600&display=swap');
+
 .footer {
   background-color: #d52122;
   height: 110vh;
@@ -9,13 +12,6 @@
   border-radius: 0px;
   height: 50px;
   width: 210px;
-}
-
-button {
-  background-color: #d52122;
-  border: none;
-  color: white;
-  font-family: "General sans";
 }
 
 nav {
@@ -30,20 +26,25 @@ nav {
 }
 
 button {
+  background-color: #d52122;
+  border: none;
+  color: white;
+  font-family: "General Sans", sans-serif; /* Added fallback */
   margin-right: 30px;
   font-size: 26px;
 }
 
 .footertext {
-  font-family: "Clash Display" !important;
+  font-family: "Clash Display", sans-serif !important; /* Added fallback */
   font-size: 150px;
   padding-top: 35vh;
   margin-left: 8vw;
   color: #f1b4b4;
 }
+
 /* =========================================================
-    RESPONSIVE OVERRIDES (Add this to the bottom of your file)
-    ========================================================= */
+   RESPONSIVE OVERRIDES
+   ========================================================= */
 
 @media (max-width: 768px) {
   .footer {
@@ -62,12 +63,11 @@ button {
     display: none;
   }
 
-  /* Combined button styles into a single block with explicit font rules */
   button {
     width: auto;
     margin-right: 0;
     text-align: left;
-    font-family: "General sans" !important;
+    font-family: "General Sans", sans-serif !important;
     font-size: 15px;
   }
 
@@ -75,14 +75,10 @@ button {
     font-size: 45px;
     padding-top: 50px;
     margin-left: 20px;
-    font-family: "Clash Display" !important; /* Explicitly forced here */
+    font-family: "Clash Display", sans-serif !important;
   }
 
   .footerlogo {
     margin-bottom: 8%;
-  }
-
-  button {
-    font-size: 15px;
   }
 }
