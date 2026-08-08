@@ -64,13 +64,13 @@
     height: 30vh;
     object-fit: cover;
     padding: 10px;
-    margin-left: 4vw;
+    margin-left: 6vw;
   }
 
   .starElement {
     position: absolute;
     top: 20px;
-    margin-left: -149px; 
+    margin-left: -200px; 
     width: 56px;
     height: auto;
   }
