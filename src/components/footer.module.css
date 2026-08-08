@@ -22,7 +22,7 @@ nav {
 }
 
 .buttondiv {
-  margin-left: 55vw;
+  margin-left: 59vw;
   display: flex;
 }
 
@@ -31,7 +31,7 @@ button {
   border: none;
   color: white;
   font-family: "General Sans", sans-serif; /* Added fallback */
-  margin-right: 5px;
+  margin-right: 15px;
   font-size: 22px;
 }
 
