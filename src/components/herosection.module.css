@@ -156,4 +156,8 @@
     font-family: 'General Sans', sans-serif;
     font-weight: 500;
   }
+
+  .logocontainer {
+    transform: translateX(0); /* Center the logo on mobile */
+  }
 }
