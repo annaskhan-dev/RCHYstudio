@@ -37,6 +37,7 @@ button {
 .footertext {
   font-family: "Clash Display", sans-serif !important; /* Added fallback */
   font-size: 150px;
+  font-weight: 700;
   padding-top: 35vh;
   margin-left: 8vw;
   color: #f1b4b4;
@@ -76,6 +77,8 @@ button {
     padding-top: 50px;
     margin-left: 20px;
     font-family: "Clash Display", sans-serif !important;
+    font-weight: 500;
+    padding-left: 2vw;
   }
 
   .footerlogo {
