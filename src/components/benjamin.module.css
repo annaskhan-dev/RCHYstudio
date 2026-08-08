@@ -28,7 +28,6 @@ body {
   color: #2a1410;;
   transform: scaleY(0.86); /* Adjust this value (e.g., 0.8, 0.9) to get the exact height you want */
   transform-origin: left top; /* Keeps the text aligned properly */
-  
 }
 
 .navtext1 {
@@ -132,7 +131,8 @@ body {
     padding: 8px 16px;
     margin-right: 0;
     font-size: 12px !important;
-    text-align: center;
+    text-align: left;
+    font-weight: 400;
     white-space: nowrap;
   }
 
