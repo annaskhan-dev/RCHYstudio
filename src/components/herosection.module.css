@@ -123,7 +123,7 @@
   .starElement { 
     width: 20px;     /* Smaller star for mobile */
     top: 10px;        /* Move up slightly */
-    margin-left: 2vw; /* Adjusted to stay near the 'M' on smaller screens */
+    margin-left: 0.5vw; /* Adjusted to stay near the 'M' on smaller screens */
   }
 
   /* Fix footer alignment */
