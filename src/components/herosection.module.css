@@ -43,7 +43,7 @@
     align-items: center;
     height: 28px;
 
-    
+
   }
 
   .logoLetter {
@@ -64,7 +64,7 @@
     height: 30vh;
     object-fit: cover;
     padding: 10px;
-    margin-left: 12vw;
+    margin-left: 11vw;
   }
 
   .starElement {
@@ -87,7 +87,7 @@
   .heroFooterImage {
     height: 220px; 
     width: 220px;
-    margin-right: 9vw;
+    margin-right: 7vw;
   }
 
   .heroFooterText {
