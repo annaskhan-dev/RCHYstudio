@@ -179,18 +179,18 @@
 
 @media (max-width: 768px) {
   .cardsSection {
-    padding-top: 40px;
+    padding-top: 80px;
     min-height: auto;
-    padding-bottom: 6vh;
+    padding-bottom: 120px; /* Added proper bottom spacing */
     padding-left: 0;
     padding-right: 0;
   }
 
   .carouselWrapper {
-    height: 380px;
+    height: 460px; /* Increased height for taller cards */
     perspective: 800px;
     width: 100%;
-    overflow: hidden; /* Clips outer track overflow */
+    overflow: hidden; 
   }
 
   .cardContainer {
@@ -201,40 +201,41 @@
   .interactionOverlay {
     width: 100%;
     left: 0;
-    transform: none; /* Ensures tracks stay locked to true center */
+    transform: none; 
   }
 
   .cardWrapper {
-    width: 190px;
-    height: 380px;
-    /* Adjusted multiplier from 85px to 115px to close the side gap */
-    transform: translateX(calc(50% - 95px + var(--offset) * 115px + var(--drag-offset)))
+    width: 215px; /* Slightly wider cards */
+    height: 460px; /* Increased card height */
+    /* Tightened spacing gap multiplier down to 95px to completely close outer spacing */
+    transform: translateX(calc(50% - 107.5px + var(--offset) * 95px + var(--drag-offset)))
       translateZ(calc(var(--abs-offset) * -40px))
       rotateY(calc(var(--offset) * -16deg))
-      scale(calc(0.7 - var(--abs-offset) * 0.1));
+      scale(calc(0.8 - var(--abs-offset) * 0.1));
   }
 
   .cardInner {
-    height: 320px;
+    height: 460px;
   }
 
   .interactionOverlay {
-    height: 320px;
+    height: 460px;
   }
 
   .hitZone {
-    height: 150px;
-    transform: translateX(calc(50% - 95px + var(--offset) * 115px));
+    height: 250px;
+    transform: translateX(calc(50% - 107.5px + var(--offset) * 95px));
   }
 
   .activeHitZone {
-    width: 190px;
-    height: 220px;
+    width: 215px;
+    height: 350px;
   }
 
   .h2 {
     font-size: 16px;
     padding-left: 15px;
     padding-right: 15px;
+    margin-bottom: 30px; /* Added spacing above cards */
   }
 }
