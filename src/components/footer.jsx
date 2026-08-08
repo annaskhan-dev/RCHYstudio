@@ -12,7 +12,7 @@ const footer = () => {
         <button>SEE THE WORK</button>
       </nav>
       <div className={style.footertext}>
-        <p>YOU REACH. <b  r />
+        <p>YOU REACH. <br />
          WE STRETCH.</p>
       </div>
     </div>
