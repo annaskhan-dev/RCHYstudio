@@ -70,7 +70,7 @@
   .starElement {
     position: absolute;
     top: 20px;
-    margin-left: 1vw; 
+    margin-left: 0.5vw; 
     width: 56px;
     height: auto;
   }
