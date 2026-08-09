@@ -31,7 +31,7 @@ const Work = () => {
       className={`${style.work} ${isOpened ? style.opened : ""}`}
     >
       <h2 className={style.h2}>
-        WE BUILD BRANDS WORTH A FOLLOW —<br /> AND PAGES WORTH A SCROLL BACK UP.
+        WE BUILD BRANDS WORTH A FOLLOW <br /> AND PAGES WORTH A SCROLL BACK UP.
       </h2>
 
       <div className={style.workcontainer}>
